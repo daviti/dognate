@@ -1,4 +1,8 @@
 <h2>Sign up</h2>
+<%= content_for(:the_terms) do %>
+    Accept <%= link_to "Terms of use", terms_path,:remote => true %> 
+    and <%=link_to "privacy Policy", privacy_path, :remote => true%>
+<% end %>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
@@ -6,15 +10,19 @@
   <div class="form-inputs">
 	<%= f.input :first_name, required: true %>
 	<%= f.input :last_name, required: true %>
-	 <%= f.input :phone_number, is_numeric: true, length: {is: 10}, allow_blank: true %>
+	 <%= f.input :phone_number, as: :string, allow_blank: true %>
     <%= f.input :email, required: true, autofocus: true %>
     <%= f.input :password, required: true %>
     <%= f.input :password_confirmation, required: true %>
   </div>
 
+  <p>Fields marked with * are required</p>
+  <p>By registering The user agrees to our <%= link_to 'Terms/Conditions', terms_path %> and <%= link_to 'Privacy Policy', privacy_path %></p>
   <div class="form-actions">
     <%= f.button :submit, "Sign up" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+<%# INVISIBLES %>

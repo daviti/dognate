@@ -1,5 +1,7 @@
 Dognate::Application.routes.draw do
-  get "members/index"
+  #get "members/index"
+  get 'terms', to: 'members#terms', as: 'terms'
+  get 'privacy', to: 'members#privacy', as: 'privacy'
   root :to => 'members#index'
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
