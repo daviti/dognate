@@ -1,4 +1,3 @@
-<h1>Welcome</h1>
 
 <% if user_signed_in? %>
 <p>We're really glad you could join us here. Enjoy the site</p>
@@ -73,4 +72,15 @@
 <% else %>
 <%= link_to 'Login', new_user_session_url %>
 <%= link_to 'Register', new_user_registration_url %>
+
+<% content_for :index do %>
+ <h1>Welcome</h1>
+	<% if user_signed_in? %>
+	<p>We're really glad you could join us here. Enjoy the site</p>
+	<%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
+	<% else %>
+	<%= link_to 'Login', new_user_session_url %>
+	<%= link_to 'Register', new_user_registration_url %>
+	<% end %>
+
 <% end %>
