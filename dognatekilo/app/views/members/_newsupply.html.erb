@@ -1,5 +1,5 @@
-<h1>add your new supply here</h1>
-<form action="/supply/new" method="post">
+<h3>add your new supply here</h3>
+<form action="/supplies/create" method="post">
 	<input type="hidden" name="user_id" value="<%=session[:id]%>">
 	<input type="text" name="name" placeholder="name of item"><br>
 	<textarea name="description" cols="30" rows="3" placeholder="enter description here"></textarea><br>
@@ -18,5 +18,3 @@
 	<input type="number" name="quantity" placeholder="0" max="100" min="0"><br>
 	<input type="submit" value="add new supply" class="btn btn-success">
 </form>
-
-<%= link_to "back", root_url%>

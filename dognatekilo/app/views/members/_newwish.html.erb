@@ -1,0 +1,7 @@
+<h3>create a new wishlist here</h3>
+<form action="/wishlists/create" method="post">
+	<input type="hidden" name="user_id" value="<%=session[:id]%>">
+	<input type="text" name="title" placeholder="title of wishlist"><br>
+	<textarea name="description" cols="30" rows="3" placeholder="enter description here"></textarea><br>
+	<input type="submit" value="add new supply" class="btn btn-success">
+</form>
