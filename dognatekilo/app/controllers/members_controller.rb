@@ -1,6 +1,8 @@
 class MembersController < ApplicationController
   def index
-  	session[:id] = current_user.id
+  	if user_signed_in?
+  		session[:id] = current_user.id
+  	end
   	@supplies = Supply.all
   end
 

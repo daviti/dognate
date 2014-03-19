@@ -2,10 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import 'bootstrap';
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	padding-top: 70px;
+	width: 100%
+}
+
+	.navbar {
+		background: rgba(255, 255, 254, 0.4);
+		padding: 5px 10px;
+
+		.btn {
+			margin-top: 10px;
+		}
+		#leftnav {
+			color: green;
+		}
+	}
 
 
 	#intro {
-		background: green 50% 0 no-repeat fixed;
+		background: white 50% 0 no-repeat fixed;
 		min-height: 800px;
 		height: auto;
 		margin: 0px auto;
@@ -24,11 +44,13 @@
 		
 				#left, #right, #center {
 					margin: auto 20px;
-					height: 200px;
-					width: 200px;
+					min-height: 200px;
+					max-height: 500px;
+					min-width: 200px;
+					max-width: 300px;
 					display: inline-block;
-					overflow: scroll;
-					background: white;
+					vertical-align: top;
+					border: none;
 
 				}
 
@@ -88,5 +110,16 @@
 
 			}
 
+	}
+
+	#supply_table, #offer_table {
+		border: 1px solid black;
+		margin: 10px;
+		max-height: 400px;
+		max-width: 500px;
+		min-width: 400px;
+		min-height: 400px;
+		display: inline-block;
+		vertical-align: top;
 	}
 

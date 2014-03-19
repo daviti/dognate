@@ -10,24 +10,25 @@
 <% if alert %>
   <p class="alert alert-error"><%= alert %></p>
 <% end %>
-<div class="navbar navbar-fixed-top navbar-default">
+<div class="navbar navbar-default navbar-fixed-top">
 	<%= yield :navbar %>
 </div>
-<section class="container-fluid" id="intro" data-type="background" data-speed="10">
+<section class="container-fluid" id="intro" data-type="background" data-speed="20">
 	<div id="middle" class="row-fluid">
 		<%= yield :intro %>
 	</div>
 </section>
-<section class="container-fluid" id="home" data-type="background" data-speed="10">
+<section class="container-fluid" id="home" data-type="background" data-speed="20">
 	<div id="form">
 		<%= yield :index %>
 	</div>
 </section>
-<section class="container-fluid" id="about" data-type="background" data-speed="10">
+<section class="container-fluid" id="about" data-type="background" data-speed="20">
 	<div id="article">
-		<p>THIS IS HERE</p>
+		<%= yield :supply_table %>
+		
 	</div>
 </section>
-</div>
+
 </body>
 </html>
