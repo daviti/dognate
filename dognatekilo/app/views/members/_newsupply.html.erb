@@ -1,0 +1,22 @@
+<h1>add your new supply here</h1>
+<form action="/supply/new" method="post">
+	<input type="hidden" name="user_id" value="<%=session[:id]%>">
+	<input type="text" name="name" placeholder="name of item">
+	<textarea name="description" cols="30" rows="3" placeholder="enter description here"></textarea>
+	<select name="condition">
+		<option value="new">new</option>
+		<option value="like new">like new</option>
+		<option value="good">good</option>
+		<option value="fair">fair</option>
+		<option value="poor">poor</option>
+	</select>
+	<select name="Category.id">
+		<% @categories.each do |category| %>
+			<option value="<%=category.id%>"><%=category.name%></option>
+		<% end %>
+	</select>
+	<input type="number" name="quantity" placeholder="0" max="100" min="0">
+	<input type="submit" value="add new supply">
+</form>
+
+<%= link_to "back", root_url%>

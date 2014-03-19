@@ -4,6 +4,7 @@ class MembersController < ApplicationController
   		session[:id] = current_user.id
   	end
   	@supplies = Supply.all
+    @categories = Category.all
   end
 
   def terms
