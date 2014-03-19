@@ -4,6 +4,80 @@
 
 <% end %>
 
+<% if user_signed_in? %>
+<p>We're really glad you could join us here. Enjoy the site</p>
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				supplies
+			</th>
+			<th>
+				wishes
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<p id="viewsupplies" class="btn">
+					view all supplies
+				</p> 
+				<table id="supplieslist">
+					<thead>
+						<tr>
+							<th>name</th>
+							<th>description</th>
+							<th>condition</th>
+							<th>quantity</th>
+						</tr>
+					</thead>
+					<tbody>
+						<% @supplies.each do |supply| %>
+						<tr>
+							<td>
+								<%= supply.name %>
+							</td>
+							<td>
+								<%= supply.description %>
+							</td>
+							<td>
+								<%= supply.condition %>
+							</td>
+							<td>
+								<%= supply.quantity %>
+							</td>
+							<td>
+								<%= link_to "edit", "/supplies/#{supply.id}/edit" %>
+							</td>
+							<td>
+								<%= link_to "delete", "/supplies/#{supply.id}", :method=>:delete %>
+							</td>
+						</tr>
+						<% end %>
+						<p id="hidesupplies" class="btn">hide supplies</p>
+					</tbody>
+				</table>	
+			</td>
+			<td>
+				<%= link_to 'view your wishes' %>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<%= link_to 'add a supply', '/supplies/new' %>
+			</td>
+			<td>
+				<%= link_to 'add a wishlist' %>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
+<% else %>
+<%= link_to 'Login', new_user_session_url %>
+<%= link_to 'Register', new_user_registration_url %>
+
 <% content_for :index do %>
  <h1>Welcome</h1>
 	<% if user_signed_in? %>
