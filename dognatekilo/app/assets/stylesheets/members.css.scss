@@ -3,29 +3,41 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import 'bootstrap';
 
-	#intro {
 
-		background: url(http://wallpaperzoo.com/wp-content/uploads/2014/01/dog-paw-backgrounds.jpg) 50% 0 no-repeat fixed;
-		min-height: 1000px;
-		height: 1000px;
+	#intro {
+		background: green 50% 0 no-repeat fixed;
+		min-height: 800px;
+		height: auto;
 		margin: 0px auto;
 		width: 100%;
 		max-width: 1920px;
 		position: relative;
+		overflow: auto;
 
 		#middle {
-			height: 458px;
+			height: auto;
 			position: absolute;
 			text-align: center;
-			top :150px;
+			top :100px;
 			width: 100%;
 			margin-bottom: 30px;
+		
+				#left, #right, #center {
+					margin: auto 20px;
+					height: 200px;
+					width: 200px;
+					display: inline-block;
+					overflow: scroll;
+					background: white;
+
+				}
+
 		}
 
 	}
 
 #middle, #form, #article {
-	height: 458px;
+	height: auto;
 	position: absolute;
 	text-align: center;
 	top :150px;
@@ -37,8 +49,8 @@
 	#home { 
 		  background: url(http://www.pageresource.com/wallpapers/wallpaper/dog-abyss_1571739.jpg)50% 0 no-repeat;
 		  min-height: 1000px;
-		  height: 1000px; 
-		  margin: 10px auto; 
+		  height: auto;
+		  margin: 0px auto; 
 		  width: 100%; 
 		  max-width: 1920px; 
 		  position: relative;
@@ -59,13 +71,13 @@
 	#about { 
 		background: url(http://www.imagebrowse.com/wp-content/uploads/2013/08/interesting-dog-and-white-blanket-wallpaper-backgrounds.jpg) 50% 0 no-repeat;
 		 min-height: 1000px; 
-		 height: 1000px; 
+		 height: auto; 
 		 margin: 0px auto; 
 		 width: 100%; 
 		 max-width: 1920px; 
 		 position: relative; 
-		 -webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
-		 box-shadow: 0 0 50px rgba(0,0,0,0.8);
+		 -webkit-box-shadow: 50px 0 100px rgba(0,0,0,0.8);
+		 box-shadow: 0 0 -50px rgba(0,0,0,0.8);
 		
 		 #article{ 
 			  height: 458px; 

@@ -1,3 +1,8 @@
+<%= content_for :navbar do %>
+
+	<%= render 'navbar' %>
+
+<% end %>
 
 <% content_for :index do %>
  <h1>Welcome</h1>
@@ -8,5 +13,13 @@
 	<%= link_to 'Login', new_user_session_url %>
 	<%= link_to 'Register', new_user_registration_url %>
 	<% end %>
+
+
+
+<% end %>
+
+<% content_for :intro do %>
+
+	<%= render 'introcontent' %>
 
 <% end %>

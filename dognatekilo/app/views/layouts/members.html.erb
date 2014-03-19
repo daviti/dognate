@@ -10,18 +10,23 @@
 <% if alert %>
   <p class="alert alert-error"><%= alert %></p>
 <% end %>
-<section id="intro" data-type="background" data-speed="10">
-	<div id="middle">
-		<p>RAAAWWWWRR</p>
+<div class="navbar navbar-fixed-top navbar-default">
+	<%= yield :navbar %>
+</div>
+<section class="container-fluid" id="intro" data-type="background" data-speed="10">
+	<div id="middle" class="row-fluid">
+		<%= yield :intro %>
 	</div>
 </section>
-<section id="home" data-type="background" data-speed="10">
+<section class="container-fluid" id="home" data-type="background" data-speed="10">
 	<div id="form">
 		<%= yield :index %>
 	</div>
 </section>
-<section id="about" data-type="background" data-speed="10">
-	<div id="article"><p>THIS IS HERE</p></div>
+<section class="container-fluid" id="about" data-type="background" data-speed="10">
+	<div id="article">
+		<p>THIS IS HERE</p>
+	</div>
 </section>
 </div>
 </body>
