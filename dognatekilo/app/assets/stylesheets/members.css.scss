@@ -2,24 +2,33 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import 'bootstrap';
+
+html {
+	overflow-x: hidden;	
+}
+
+
 * {
 	padding: 0;
 	margin: 0;
 }
 body {
 	padding-top: 70px;
-	width: 100%
+	width: 100%;
 }
 
 	.navbar {
 		background: rgba(255, 255, 254, 0.4);
 		padding: 5px 10px;
 
-		.btn {
+		.nav {
 			margin-top: 10px;
 		}
 		#leftnav {
 			color: green;
+		}
+		.btn {
+			padding: 3px;
 		}
 	}
 
@@ -44,6 +53,7 @@ body {
 		
 				#left, #right, #center {
 					margin: auto 20px;
+					margin-bottom: 10px;
 					min-height: 200px;
 					max-height: 500px;
 					min-width: 200px;
@@ -92,7 +102,8 @@ body {
  
 	#about { 
 		background: url(http://www.imagebrowse.com/wp-content/uploads/2013/08/interesting-dog-and-white-blanket-wallpaper-backgrounds.jpg) 50% 0 no-repeat;
-		 min-height: 1000px; 
+		
+		 min-height: 1200px; 
 		 height: auto; 
 		 margin: 0px auto; 
 		 width: 100%; 
@@ -100,16 +111,26 @@ body {
 		 position: relative; 
 		 -webkit-box-shadow: 50px 0 100px rgba(0,0,0,0.8);
 		 box-shadow: 0 0 -50px rgba(0,0,0,0.8);
+
 		
 		 #article{ 
 			  height: 458px; 
 			  position: absolute; 
 			  text-align: center; 
-			  top: 150px; 
+			  top: 0px; 
 			  width: 100%; 
 
 			}
 
+	}
+
+	.carousel {
+		min-height: 400px;
+		background: center;
+		 -webkit-background-size: cover;
+	 	 -moz-background-size: cover;
+	 	 -o-background-size: cover;
+	 	 background-size: cover;
 	}
 
 	#supply_table, #offer_table {
@@ -118,8 +139,53 @@ body {
 		max-height: 400px;
 		max-width: 500px;
 		min-width: 400px;
-		min-height: 400px;
+		min-height: 100px;
 		display: inline-block;
 		vertical-align: top;
+	}
+
+	#ender { 
+		background: url()  0 no-repeat;
+		
+		 min-height: 1000px; 
+		 height: auto; 
+		 margin: 0px auto; 
+		 width: 100%; 
+		 max-width: 1920px; 
+		 position: relative; 
+		 -webkit-box-shadow: 50px 0 100px rgba(0,0,0,0.8);
+		 box-shadow: 0 0 -50px rgba(0,0,0,0.8);
+
+		
+		 #article{ 
+			  height: 458px; 
+			  position: absolute; 
+			  text-align: center; 
+			  top: 100px; 
+			  width: 100%; 
+
+			}
+
+	}
+
+	#footer { 
+	background: gray  0 no-repeat;
+	
+	 min-height: 400px; 
+	 height: auto; 
+	 margin: 0px auto; 
+	 width: 100%; 
+	 max-width: 1920px; 
+	 position: relative; 
+	
+	 #article{ 
+		  height: 458px; 
+		  position: absolute; 
+		  text-align: center; 
+		  top: 100px; 
+		  width: 100%; 
+
+		}
+
 	}
 

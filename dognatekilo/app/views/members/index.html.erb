@@ -5,6 +5,7 @@
 <% end %>
 
 <% content_for :supply_table do %>
+	<%= render 'supplycarousel' %>
 	<%= render 'supplytable' %>
 <% end %> 
 
@@ -12,7 +13,7 @@
 
 <% content_for :index do %>
 	
-	<%#= render 'indexcontents' %>
+	<%= render 'index' %>
 
 	<% if user_signed_in? %>
 	<%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
@@ -26,7 +27,13 @@
 <% end %>
 
 <% content_for :intro do %>
-
 	<%= render 'introcontent' %>
+<% end %>
 
+<% content_for :ender do %>
+	<%= render 'ender' %>
+<% end %>
+
+<% content_for :footer do %>
+	<%= render 'footer' %>
 <% end %>
