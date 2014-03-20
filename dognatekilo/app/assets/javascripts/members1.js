@@ -64,5 +64,8 @@ $(document).ready(function() {
 			$('#wishes').fadeOut();
 		});
 
+		//for the navbar
+		$('.dropdown-toggle').dropdown()
+
 		
 });

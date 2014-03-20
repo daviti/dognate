@@ -96,6 +96,12 @@ body {
 	margin-bottom: 30px;
 }
 
+#register {
+	input{
+		width:300px;
+	}
+}
+
 
 	#home { 
 		  background: url(http://www.pageresource.com/wallpapers/wallpaper/dog-abyss_1571739.jpg)50% 0 no-repeat;
@@ -142,8 +148,43 @@ body {
 			}
 
 	}
+	#edit_register {
+		background: rgba(255, 255, 250, 0.3);
+		padding: 10px;
+		max-width: 540px;	
+		margin: 0 auto;
+	}
 
-	.carousel {
+	.form-horizontal {
+		
+		text-align: center;
+		display:inline-block;
+
+		margin-right: 10px;
+		label {
+			margin-right: 10px;
+			font-weight: bold;
+			margin-top: 15px;
+		}
+
+		input{
+			
+			margin-top: 15px;
+		
+		}
+		span {
+			display: block;
+		}
+		.btn {
+			display: block;
+			width: 200px;
+			position: relative;
+			left: 170px;
+		}
+	
+	}
+
+	.my_carousel {
 		min-height: 400px;
 		background: center;
 		 -webkit-background-size: cover;
@@ -170,7 +211,7 @@ body {
 		width: 90px;
 		padding: 4px;
 		margin: 0px auto;
-		border-radius: 4px;
+		border-radius: 0px;
 		-webkit-box-shadow: 0px 0 10px rgba(0,0,0,0.8);
 
 	}
@@ -210,7 +251,7 @@ body {
 	 position: relative; 
 	
 	 #foot_article{ 
-		  height: 458px; 
+		  height: auto; 
 		  position: absolute; 
 		  text-align: center; 
 		  top: 30px; 
