@@ -6,14 +6,20 @@
 
 <% content_for :supply_table do %>
 	<%= render 'supplycarousel' %>
-	<%= render 'supplytable' %>
-
+	<%= render 'wishtable' %>
+	<%= render 'supplytable' %><br>
+<% end %>
+<% content_for :supply_modal do %>
 	<%= render 'newsupply' %>
 	<%= render 'newwish' %>
 <% end %>
 <%# content_for :supply_modal do %>
 	<%#= render 'newsupply' %>
 <%# end %>
+
+<% content_for :wish_modal do %>
+	<%= render 'newwish' %>
+<% end %>
 
 
 

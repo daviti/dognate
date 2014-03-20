@@ -46,21 +46,23 @@ $(document).ready(function() {
 
 	    //for the supply buttons
 		$('#supplies').hide();
-
 		$('#supply').click(function(){
 			$('#supplies').fadeIn();
 			$('#supply_table').css('background', 'rgba(255, 255, 250, 0.5)');
 		});
 		$('#hidesupplies').click(function(){
 			$('#supplies').fadeOut();
-
 		}); 
 
-
-	
-
-
-
+		//fer the wishes table
+		$('#wishes').hide();
+		$('#wish').click(function(){
+			$('#wishes').fadeIn();
+			$('#wishlist').css('background', 'rgba(255, 255, 250, 0.5');
+		});
+		$('#hidewishes').click(function(){
+			$('#wishes').fadeOut();
+		});
 
 		
 });

@@ -21,6 +21,10 @@ body {
 	}
 
 }
+	#wishmodal{
+		text-align: center;
+
+	}
 
 	#supplymodal{
 		margin: 0px auto;
@@ -128,7 +132,7 @@ body {
 		 box-shadow: 0 0 -50px rgba(0,0,0,0.8);
 
 		
-		 #article{ 
+		 #about_article{ 
 			  height: 458px; 
 			  position: absolute; 
 			  text-align: center; 
@@ -149,7 +153,6 @@ body {
 	}
 
 	#supply_table, #offer_table {
-		border: 1px solid black;
 		margin: 10px;
 		max-height: 400px;
 		max-width: 500px;
@@ -157,6 +160,19 @@ body {
 		min-height: 100px;
 		display: inline-block;
 		vertical-align: top;
+	}
+
+	#hidewishes, #hidesupplies {
+		border: 1px solid black;
+		font-size: 14px;
+		font-weight:bold;
+		background: rgba(20,219,219,0.2);
+		width: 90px;
+		padding: 4px;
+		margin: 0px auto;
+		border-radius: 4px;
+		-webkit-box-shadow: 0px 0 10px rgba(0,0,0,0.8);
+
 	}
 
 	#ender { 
@@ -172,7 +188,7 @@ body {
 		 box-shadow: 0 0 -50px rgba(0,0,0,0.8);
 
 		
-		 #article{ 
+		 #ender_article{ 
 			  height: 458px; 
 			  position: absolute; 
 			  text-align: center; 
@@ -184,7 +200,7 @@ body {
 	}
 
 	#footer { 
-	background: gray  0 no-repeat;
+	background: #292C30 0 no-repeat;
 	
 	 min-height: 400px; 
 	 height: auto; 
@@ -193,12 +209,25 @@ body {
 	 max-width: 1920px; 
 	 position: relative; 
 	
-	 #article{ 
+	 #foot_article{ 
 		  height: 458px; 
 		  position: absolute; 
 		  text-align: center; 
-		  top: 100px; 
+		  top: 30px; 
 		  width: 100%; 
+		  color: lightgrey;
+		  padding-top: 0px;
+
+		  #foot_left, #foot_left_center, #foot_right_center, #foot_right {
+		  	border: 1px solid lightgray;
+		  	display: inline-block;
+		  	max-width: 250px;
+		  	min-width: 300px;
+		  	min-height: 350px;
+		  	max-height: 400px;
+		  	vertical-align: top;
+
+		  }
 
 		}
 
