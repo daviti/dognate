@@ -52,7 +52,13 @@ $(document).ready(function() {
 		});
 		$('#hidesupplies').click(
 			function(){$('#supplieslist').fadeOut();
-		}); 
+		});
+
+		$('#supplymodal').modal('show');
+		$('#opensupply').click(function(){
+			// alert('hey');
+			// $('#myModal').modal(options)
+		});
 
 		$(document).on('scroll', function() {
 			$('.navbar').fadeTo('slow', 1, function() {
