@@ -1,9 +1,15 @@
 class WishlistsController < ApplicationController
 		def create
-			@supply = Supply.new(supply_params)
-		if @supply.save
+			@wishlist = Wishlist.new(wish_params)
+		if @wishlist.save
 			redirect_to root_url
 		else
 			render :action => "new"
 		end
+
+		private
+		def wish_params
+			params.require(:wishlist).permit(:title,:description)
+		end
+
 end

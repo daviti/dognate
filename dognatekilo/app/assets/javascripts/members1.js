@@ -52,11 +52,6 @@ $(document).ready(function() {
 			function(){$('#supplieslist').fadeOut();
 		});
 
-		$('#supplymodal').modal('show');
-		$('#opensupply').click(function(){
-			// alert('hey');
-			// $('#myModal').modal(options)
-		});
 
 		
 });
