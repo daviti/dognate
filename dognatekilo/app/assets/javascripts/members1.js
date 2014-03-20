@@ -4,6 +4,8 @@
 // 	$('body').width(ww); //evaluates to body width = window width
 // }
 
+
+//function for the carousel pictures
 function carousel(id) {
 	var bgimgs = [ 'http://www.bubblews.com/assets/images/news/521013543_1385596410.jpg', 'http://www.adogsdayout.com/wp-content/uploads/2012/07/Dogs1.jpg', 'http://pixabay.com/get/b1a161cc546e46018c9a/1395257917/dog-190056_1280.jpg?direct'];
 	var color = bgimgs[id];
@@ -28,7 +30,7 @@ $(document).ready(function() {
 		// 	set_body_width(); 
 		// });
 
-
+		//for the parallax display
 	    $('section[data-type="background"]').each(function(){
 	    	var $bgobj = $(this); // assigning the object
 	 		$(window).scroll(function() {
@@ -42,7 +44,7 @@ $(document).ready(function() {
 				});
 		});
 
-
+	    //for the supply buttons
 		$('#supplieslist').hide();
 
 		$('#viewsupplies').click(
@@ -51,6 +53,14 @@ $(document).ready(function() {
 		$('#hidesupplies').click(
 			function(){$('#supplieslist').fadeOut();
 		}); 
+
+		$(document).on('scroll', function() {
+			$('.navbar').fadeTo('slow', 1, function() {
+				$(this).css('background', 'rgba(255, 255, 254, 0.6');
+			});
+		});
+
+
 
 		
 });
