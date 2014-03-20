@@ -23,6 +23,7 @@ body {
 }
 	#wishmodal{
 		text-align: center;
+		display: none;
 
 	}
 
@@ -30,10 +31,8 @@ body {
 		margin: 0px auto;
 		width: 350px;
 		text-align: center;
+		display: none;
 
-		form {
-			
-		}
 	}
 
 	.navbar {
@@ -193,7 +192,7 @@ body {
 	 	 background-size: cover;
 	}
 
-	#supply_table, #offer_table {
+	#supply_table, #wish_table {
 		margin: 10px;
 		max-height: 400px;
 		max-width: 500px;
