@@ -2,9 +2,12 @@ Dognate::Application.routes.draw do
   #get "members/index"
   get 'terms', to: 'members#terms', as: 'terms'
   get 'privacy', to: 'members#privacy', as: 'privacy'
+  #get 'new_address', to: 'addresses#new', as: 'new_addy'
+  #post 'create_address', to: 'addresses#create', as: 'create_addy'
   root :to => 'members#index'
-  devise_for :users
 
+  devise_for :users
+  resources :addresses
   resources :supplies
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -39,15 +39,23 @@ body {
 	.navbar {
 		background: rgba(255, 255, 254, 0.4);
 		padding: 5px 10px;
+		max-height: 70px;
 
 		.nav {
 			margin-top: 10px;
 		}
 		#leftnav {
 			color: green;
+			margin-top: 0px;
 		}
 		.btn {
 			padding: 3px;
+		}
+		.navlist {
+			vertical-align:top;
+			ul.nav li a {
+				background: rgba(255,255,255,0.0)
+			}
 		}
 	}
 
@@ -126,7 +134,7 @@ body {
 	}
  
 	#about { 
-		background: url(http://www.imagebrowse.com/wp-content/uploads/2013/08/interesting-dog-and-white-blanket-wallpaper-backgrounds.jpg) 50% 0 no-repeat;
+		background:  50% 0 no-repeat;
 		
 		 min-height: 1200px; 
 		 height: auto; 
@@ -146,7 +154,9 @@ body {
 			  width: 100%; 
 
 			}
-
+		  .my_carousel {
+			  	background:white;
+			  }
 	}
 	#edit_register {
 		background: rgba(255, 255, 250, 0.3);
@@ -191,6 +201,7 @@ body {
 	 	 -moz-background-size: cover;
 	 	 -o-background-size: cover;
 	 	 background-size: cover;
+	 	  -webkit-box-shadow: 50px 0 100px rgba(0,0,0,0.8);
 	}
 
 	#supply_table, #offer_table {
@@ -217,7 +228,7 @@ body {
 	}
 
 	#ender { 
-		background: url()  0 no-repeat;
+		background: url(http://www.imagebrowse.com/wp-content/uploads/2013/08/interesting-dog-and-white-blanket-wallpaper-backgrounds.jpg)  0 no-repeat;
 		
 		 min-height: 1000px; 
 		 height: auto; 
