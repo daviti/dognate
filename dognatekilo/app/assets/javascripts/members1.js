@@ -45,26 +45,20 @@ $(document).ready(function() {
 		});
 
 	    //for the supply buttons
-		$('#supplieslist').hide();
+		$('#supplies').hide();
 
-		$('#viewsupplies').click(
-			function(){$('#supplieslist').fadeIn();
+		$('#supply').click(function(){
+			$('#supplies').fadeIn();
+			$('#supply_table').css('background', 'rgba(255, 255, 250, 0.5)');
 		});
-		$('#hidesupplies').click(
-			function(){$('#supplieslist').fadeOut();
-		});
+		$('#hidesupplies').click(function(){
+			$('#supplies').fadeOut();
 
-		$('#supplymodal').modal('show');
-		$('#opensupply').click(function(){
-			// alert('hey');
-			// $('#myModal').modal(options)
-		});
+		}); 
 
-		$(document).on('scroll', function() {
-			$('.navbar').fadeTo('slow', 1, function() {
-				$(this).css('background', 'rgba(255, 255, 254, 0.6');
-			});
-		});
+
+	
+
 
 
 

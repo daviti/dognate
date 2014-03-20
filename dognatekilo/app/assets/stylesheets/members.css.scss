@@ -13,7 +13,7 @@ html {
 	margin: 0;
 }
 body {
-	
+	margin-top: 70px;
 	width: 100%;
 
 	.modal-open {
@@ -23,12 +23,17 @@ body {
 }
 
 	#supplymodal{
-		z-index: 400000;
-		background: black;
+		margin: 0px auto;
+		width: 350px;
+		text-align: center;
+
+		form {
+			
+		}
 	}
 
 	.navbar {
-		background: rgba(255, 255, 254, 0.0);
+		background: rgba(255, 255, 254, 0.4);
 		padding: 5px 10px;
 
 		.nav {

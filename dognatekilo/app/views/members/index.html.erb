@@ -7,14 +7,13 @@
 <% content_for :supply_table do %>
 	<%= render 'supplycarousel' %>
 	<%= render 'supplytable' %>
-	<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#supplymodal" id="opensupply">
-	  Launch demo modal
-	</button>
+
+	<%= render 'newsupply' %>
 	<%= render 'newwish' %>
 <% end %>
-<% content_for :supply_modal do %>
-	<%= render 'newsupply' %>
-<% end %>
+<%# content_for :supply_modal do %>
+	<%#= render 'newsupply' %>
+<%# end %>
 
 
 
