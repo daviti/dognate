@@ -1,4 +1,5 @@
 <h1>Edit Your Wish</h1>
+<%= @supply.category_id %>
 <%= simple_form_for @supply, html: { multipart: true } do |f| %>
 <%= f.file_field :photo %>
 <%= f.input :name, label: false, required: true, :input_html => {:value=>@supply.name} %>

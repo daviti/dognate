@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/josevalim/rails-footnotes.git
+  revision: 062b4f72bec4fb7f678ee7e42a93390abac94d96
+  specs:
+    rails-footnotes (3.7.9)
+      rails (>= 3.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -142,6 +149,7 @@ DEPENDENCIES
   jquery-rails
   paperclip (~> 4.1)
   rails (= 4.0.2)
+  rails-footnotes!
   sass-rails (~> 4.0.0)
   sdoc
   simple_form
