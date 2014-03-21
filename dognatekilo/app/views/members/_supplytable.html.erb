@@ -1,0 +1,59 @@
+<% if user_signed_in? %>
+<div id="supply_table" class="col-md-6">
+	<h4>Supply</h4>
+	<table class="table table-responsive" id="supplieslist">
+		<thead>
+			<tr>
+				<th>name</th>
+				<th>description</th>
+				<th>condition</th>
+				<th>quantity</th>
+			</tr>
+		</thead>
+		<tbody>
+		<% if @supplies != nil %>
+			<% @supplies.each do |supply| %>
+			<tr>
+				<td>
+					<%= supply.name %>
+				</td>
+				<td>
+					<%= supply.description %>
+				</td>
+				<td>
+					<%= supply.condition %>
+				</td>
+				<td>
+					<%= supply.quantity %>
+				</td>
+				<td>
+					<%= link_to "edit", "/supplies/#{supply.id}/edit" %>
+				</td>
+				<td>
+					<%= link_to "delete", "/supplies/#{supply.id}", :method=>:delete %>
+				</td>
+			</tr>
+			<% end %>
+		<% end %>
+			<p id="viewsupplies" class="btn">view supplies</p>
+			<p id="hidesupplies" class="btn">hide supplies</p>
+		</tbody>
+	</table>	
+</div>
+<div id="offer_table" class="col-md-6">
+	<h4>Wishes</h4>
+	<table class="table table-responsive">
+		<thead>
+			<tr>
+				<th>Wish</th>
+				<th>Location</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+	<% end %>
