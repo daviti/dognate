@@ -7,6 +7,7 @@ Dognate::Application.routes.draw do
   root :to => 'members#index'
 
   devise_for :users
+  resources :wishlists
   resources :addresses
   resources :supplies
   # The priority is based upon order of creation: first created -> highest priority.

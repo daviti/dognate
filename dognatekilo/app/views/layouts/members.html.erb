@@ -13,7 +13,7 @@
 <div id="navbar" class="navbar navbar-default navbar-fixed-top">
 	<%= yield :navbar %>
 </div>
-<div data-spy="scroll" data-target="#navbar">
+<div id="container" data-spy="scroll" data-target="#navbar">
 	<section id="intro" data-type="background" data-speed="20">
 		<% if user_signed_in? %>
 			<h4 id="username" class="pull-left"><%= @user.first_name + " " + @user.last_name %></h4>
@@ -41,8 +41,8 @@
 			<%= yield :ender %>
 		</div>
 	</section>
-	<section id="footer" data-type="background" data-speed="10">
-		<div id="foot_article">
+	<section class="" id="footer" data-type="background" data-speed="10">
+		<div class="" id="foot_article">
 			<%= yield :footer %>
 		</div>	
 	</section>

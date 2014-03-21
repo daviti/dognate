@@ -6,19 +6,15 @@
         <h4 class="modal-title">Add a new item here</h4>
       </div>
       <div class="modal-body">
-      	<img src="#" id="img_prev" alt="your image">
-		<% form_for @supply, :url => supply_path, :html => {:multipart => true } do |f| %>
-			<%= f.file_field :avatar %>
-			<%= f.input :name, required: true, placeholder: "Item Title" %>
-			<%= f.input :description, required: true, placeholder: "Enter description Here" %>
-			<%= f.input :condition, :collection => ["New", "Close to New", "Good", "Fair", "Poor"] %>
+      	
+		<%= form_for("/supplies/", method: :post, url: new_supply_path, :html => {:multipart => true }) do |f| %>
+			<%= f.file_field :photo %>
+			<%= f.text_field :name, required: true, placeholder: "Item Title" %>
+			<%= f.text_area :description, required: true, placeholder: "Enter description Here" %>
+			<%= f.text_field :condition, :collection => ["New", "Close to New", "Good", "Fair", "Poor"] %>
 		
-			<%= f.input :category_id, :collection => [ %>
-				<% @categories.each do |category| %>
-					<%= category.name %>
-				<% end %>
-				<%= ], required: true %> 
-			<%= f.input :number, required: true, :collection => [1..100] %>
+			<%= select_tag( :category_id, options_for_select(1..2), required: true ) %> 
+			<%= select_tag( :number, options_for_select(1..100), required: true) %>
 			<%= f.submit :submit, class: "btn btn-primary" %>
 		<% end %>
       </div>

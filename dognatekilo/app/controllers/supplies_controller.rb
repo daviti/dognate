@@ -4,11 +4,12 @@ class SuppliesController < ApplicationController
 	end
 
 	def new
-		@supply = Supply.new
+		@supply = current_user.supplies.new
 	end
 
 	def create
-		@supply = Supply.new(supply_params)
+		@supply = current_user.supplies.new(supply_params)
+		puts @supply
 		if @supply.save
 			redirect_to root_url
 		else
@@ -18,6 +19,7 @@ class SuppliesController < ApplicationController
 
 	def edit
 		@supply = Supply.find(params[:id])
+		@categories = Category.all
 	end
 
 	def update
@@ -33,6 +35,8 @@ class SuppliesController < ApplicationController
 
 	private
 	def supply_params
-  		params.require(:supply).permit(:name,:description,:condition,:quantity,:category_id)
+		#if params[:supply].present?
+  			params.permit(:name,:description,:condition,:quantity, :category_id, :photo)
+		#end
 	end
 end
