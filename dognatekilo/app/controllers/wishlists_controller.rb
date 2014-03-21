@@ -1,15 +1,24 @@
 class WishlistsController < ApplicationController
-		def create
-			@wishlist = Wishlist.new(wish_params)
-		if @wishlist.save
-			redirect_to root_url
-		else
-			render :action => "new"
+		def new
+			@wishlist = current_user.wishlists.new
 		end
 
-		private
+		def create
+			@wishlist = current_user.wishlists.new(wish_params)
+			if @wishlist.save
+				redirect_to root_url
+			else
+				render :action => "new"
+			end
+		end
+		def show
+			
+		end
+
+
+	private
 		def wish_params
-			params.require(:wishlist).permit(:title,:description)
+			params.permit(:title, :description, :photo)
 		end
 
 end

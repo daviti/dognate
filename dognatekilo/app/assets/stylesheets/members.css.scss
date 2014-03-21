@@ -21,6 +21,11 @@ body {
 	}
 
 }
+
+#container {
+		
+}
+
 	#wishmodal{
 		text-align: center;
 		display: none;
@@ -29,24 +34,39 @@ body {
 
 	#supplymodal{
 		margin: 0px auto;
-		width: 350px;
+		
 		text-align: center;
 		display: none;
+		#img_prev {
+			width: 200px;
+			height: 200px;
+		}
+		#img_input {
+			margin-left: 40px;
+		}
 
 	}
 
 	.navbar {
 		background: rgba(255, 255, 254, 0.4);
 		padding: 5px 10px;
+		
 
 		.nav {
 			margin-top: 10px;
 		}
 		#leftnav {
 			color: green;
+			margin-top: 0px;
 		}
 		.btn {
 			padding: 3px;
+		}
+		.navlist {
+			vertical-align:top;
+			ul.nav li a {
+				background: rgba(255,255,255,0.0)
+			}
 		}
 	}
 
@@ -54,12 +74,14 @@ body {
 	#intro {
 		background: lightblue 50% 0 no-repeat fixed;
 		min-height: 800px;
-		height: auto;
+		overflow: auto;
 		margin: 0px auto;
 		width: 100%;
 		max-width: 1920px;
 		position: relative;
-		overflow: auto;
+		height: auto;
+
+
 
 		#middle {
 			height: auto;
@@ -125,7 +147,7 @@ body {
 	}
  
 	#about { 
-		background: url(http://www.imagebrowse.com/wp-content/uploads/2013/08/interesting-dog-and-white-blanket-wallpaper-backgrounds.jpg) 50% 0 no-repeat;
+		background:  50% 0 no-repeat;
 		
 		 min-height: 1200px; 
 		 height: auto; 
@@ -145,7 +167,9 @@ body {
 			  width: 100%; 
 
 			}
-
+		  .my_carousel {
+			  	background:white;
+			  }
 	}
 	#edit_register {
 		background: rgba(255, 255, 250, 0.3);
@@ -190,6 +214,7 @@ body {
 	 	 -moz-background-size: cover;
 	 	 -o-background-size: cover;
 	 	 background-size: cover;
+	 	  -webkit-box-shadow: 50px 0 100px rgba(0,0,0,0.8);
 	}
 
 	#supply_table, #wish_table {
@@ -216,7 +241,7 @@ body {
 	}
 
 	#ender { 
-		background: url()  0 no-repeat;
+		background: url(http://www.imagebrowse.com/wp-content/uploads/2013/08/interesting-dog-and-white-blanket-wallpaper-backgrounds.jpg)  0 no-repeat;
 		
 		 min-height: 1000px; 
 		 height: auto; 
@@ -224,8 +249,7 @@ body {
 		 width: 100%; 
 		 max-width: 1920px; 
 		 position: relative; 
-		 -webkit-box-shadow: 50px 0 100px rgba(0,0,0,0.8);
-		 box-shadow: 0 0 -50px rgba(0,0,0,0.8);
+	
 
 		
 		 #ender_article{ 
@@ -240,36 +264,36 @@ body {
 	}
 
 	#footer { 
-	background: #292C30 0 no-repeat;
-	
-	 min-height: 400px; 
-	 height: auto; 
-	 margin: 0px auto; 
-	 width: 100%; 
-	 max-width: 1920px; 
-	 position: relative; 
-	
-	 #foot_article{ 
-		  height: auto; 
-		  position: absolute; 
-		  text-align: center; 
-		  top: 30px; 
-		  width: 100%; 
-		  color: lightgrey;
-		  padding-top: 0px;
+		background: #292C30 0 no-repeat;
+		
+		 min-height: 400px; 
+		 height: auto; 
+		 margin: 0px auto; 
+		 width: 100%; 
+		 max-width: 1920px; 
+		 position: relative; 
+		
+		 #foot_article{ 
+			  height: auto; 
+			  position: absolute; 
+			  text-align: center; 
+			  top: 30px; 
+			  width: 100%; 
+			  color: lightgrey;
+			  padding-top: 0px;
 
-		  #foot_left, #foot_left_center, #foot_right_center, #foot_right {
-		  	border: 1px solid lightgray;
-		  	display: inline-block;
-		  	max-width: 250px;
-		  	min-width: 300px;
-		  	min-height: 350px;
-		  	max-height: 400px;
-		  	vertical-align: top;
+			  #foot_left, #foot_left_center, #foot_right_center, #foot_right {
+			  	border: 1px solid lightgray;
+			  	display: inline-block;
+			  	max-width: 250px;
+			  	min-width: 300px;
+			  	min-height: 350px;
+			  	max-height: 400px;
+			  	vertical-align: top;
 
-		  }
+			  }
 
-		}
+			}
 
 	}
 

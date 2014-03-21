@@ -4,23 +4,44 @@
 // 	$('body').width(ww); //evaluates to body width = window width
 // }
 
-
+//FUNCTIONS GO UP HERE
+//FUNCTION SECTION
 //function for the carousel pictures
 function carousel(id) {
 	var bgimgs = [ 'http://www.bubblews.com/assets/images/news/521013543_1385596410.jpg', 'http://www.adogsdayout.com/wp-content/uploads/2012/07/Dogs1.jpg', 'http://pixabay.com/get/b1a161cc546e46018c9a/1395257917/dog-190056_1280.jpg?direct'];
 	var color = bgimgs[id];
 	var count = 3;
-	$('.carousel')
-	$('.carousel').css("background", 'url('+color+') center no-repeat');
+	$('.my_carousel')
+	$('.my_carousel').css("background", 'url('+color+') center no-repeat');
 	id = id + 1;
 	if(id==count) id = 0;
 	
 
 	setTimeout('carousel('+id+')', 10000 );
 }
+	
+function readURL(input) {
+	if (input.files && input.files[0]) {
+		var reader = new FileReader();
+		reader.onload = function(e) {
+			$('#img_prev').attr('src', e.target.result).width(200).height(200);
+		};
+		reader.readAsDataURL(input.files[0]);
+	}
 
+}
+function readwishURL(input) {
+	if (input.files && input.files[0]) {
+		var reader = new FileReader();
+		reader.onload = function(e) {
+			$('#img_preview').attr('src', e.target.result).width(200).height(200);
+		};
+		reader.readAsDataURL(input.files[0]);
+	}
 
+}
 
+//END FUNCTION SECTION
 
 $(document).ready(function() {
 		carousel(0);
@@ -48,7 +69,7 @@ $(document).ready(function() {
 		$('#supplies').hide();
 		$('#supply').click(function(){
 			$('#supplies').fadeIn();
-			$('#supply_table').css('background', 'rgba(255, 255, 250, 0.5)');
+			$('#supplylist').css('background', 'rgba(255, 255, 250, 0.5)');
 		});
 		$('#hidesupplies').click(function(){
 			$('#supplies').fadeOut();
@@ -66,6 +87,9 @@ $(document).ready(function() {
 
 		//for the navbar
 		$('.dropdown-toggle').dropdown()
+
+		$('#endertab').removeClass('.active')
+
 
 		
 });

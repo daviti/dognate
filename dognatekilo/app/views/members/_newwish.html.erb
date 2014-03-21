@@ -6,11 +6,13 @@
         <h4 class="modal-title">What does your dog wish for?</h4>
       </div>
       <div class="modal-body">
-<form action="/wishlist/create" method="post">
-	<input type="hidden" name="user_id" value="<%=session[:id]%>">
-	<input type="text" name="title" placeholder="title of wishlist"><br>
-	<textarea name="description" cols="30" rows="3" placeholder="enter description here"></textarea><br>
-	<input type="submit" value="add new wishlist" class="btn btn-success">
+      <img src="#" id="img_preview" alt="your image">
+<form action="/wishlists" method="post" enctype="multipart/form-data">
+  	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+     <input class="" id="img_input" type="file" onchange="readwishURL(this);" name="photo">
+  	<input type="text" name="title" placeholder="title of wishlist"><br>
+  	<textarea name="description" cols="30" rows="3" placeholder="enter description here"></textarea><br>
+  	<input type="submit" value="add new wishlist" class="btn btn-success">
 </form>
       </div>
       <div class="modal-footer">

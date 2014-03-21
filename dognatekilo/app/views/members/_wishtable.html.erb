@@ -1,25 +1,30 @@
 <div id="wish_table" class="col-md-6">
 	<h4 id="wish">Wishes</h4>
 	<div id="wishes">
+		<div id="hidewishes" class="btn pull-left">Hide table</div>
+		<button class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#wishmodal">
+	  Add New Wishlist
+		</button>
 		<table class="table table-responsive" id="wishlist">
 			<thead>
 				<tr>
+					<th></th>
 					<th>Wish</th>
 					<th>Location</th>
 				</tr>
 			</thead>
 			<tbody>
-			<%# if @wishes != nil %>
+			<% @wishlists.each do |wish| %>
 				<tr>
-					<td>this wish</td>
-					<td>somewhere</td>
+					<td><%= image_tag wish.photo.url(:thumb) %></td>
+					<td><h5><%= wish.title %></h5><br>
+					<p><%= wish.description %>aio ahtioha hoiahtoihihtoiahhaoi aho iahtoiah oiah oitha otiaho iha oithao</p></td>
+					<td><%#= current_user.addresses.zipcode %></td>
 				</tr>
-			<%# end %>
+
+			<% end %>
 			</tbody>
 		</table>
-		<div id="hidewishes" class="btn pull-left">Hide table</div>
-		<button class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#wishmodal">
-	  Add New Wishlist
-		</button>
+		
 	</div>
 </div>

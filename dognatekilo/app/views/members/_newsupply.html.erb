@@ -3,12 +3,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">Add a new supply here</h4>
+        <h4 class="modal-title">Add a new item here</h4>
       </div>
       <div class="modal-body">
-<form action="/supplies/create" method="post">
-	<input type="hidden" name="user_id" value="<%=session[:id]%>">
-	<input type="text" name="name" placeholder="name of item"><br>
+      	<img src="#" id="img_prev" alt="your image">
+<form action="/supplies" method="post" enctype="multipart/form-data">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	<input class="" id="img_input" type="file" onchange="readURL(this);" name="photo">
+	<input  type="text" name="name" placeholder="name of item"><br>
 	<textarea name="description" cols="30" rows="3" placeholder="enter description here"></textarea><br>
 	<select name="condition">
 		<option value="new">new</option>
@@ -17,7 +19,7 @@
 		<option value="fair">fair</option>
 		<option value="poor">poor</option>
 	</select><br>
-	<select name="Category.id">
+	<select name="category_id">
 		<% @categories.each do |category| %>
 			<option value="<%=category.id%>"><%=category.name%></option>
 		<% end %>

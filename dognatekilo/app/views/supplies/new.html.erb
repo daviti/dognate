@@ -1,11 +1,31 @@
-<h1>add your new supply here</h1>
-<%= simple_form_for @supply do |f| %>
-<%= f.input :name, placeholder: "name of item", label: false, required: true %>
-<%= f.input :user_id, :as => :hidden, :input_html => {:value=>"#{session[:id]}"}  %>
-<%= f.input :description, placeholder: "enter description", label: false, required: true %>
-<%= f.input :condition, placeholder: "condition", label: false, :collection=>["new","like new","fair","poor"], required: true %>
-<%= f.input :quantity, placeholder: "quantity",label: false, :collection=>(1..100), required: true %>
-<%= f.submit :submit %>
-<% end %>
-
-<%= link_to "back", root_url%>
+<div class="modal fade" id="supplymodal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Add a new item here</h4>
+      </div>
+      <div class="modal-body">
+      	<img src="#" id="img_prev" alt="your image">
+		<% form_for @supply, :url => supply_path, :html => {:multipart => true } do |f| %>
+			<%= f.file_field :avatar %>
+			<%= f.input :name, required: true, placeholder: "Item Title" %>
+			<%= f.input :description, required: true, placeholder: "Enter description Here" %>
+			<%= f.input :condition, :collection => ["New", "Close to New", "Good", "Fair", "Poor"] %>
+		
+			<%= f.input :category_id, :collection => [ %>
+				<% @categories.each do |category| %>
+					<%= category.name %>
+				<% end %>
+				<%= ], required: true %> 
+			<%= f.input :number, required: true, :collection => [1..100] %>
+			<%= f.submit :submit, class: "btn btn-primary" %>
+		<% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
