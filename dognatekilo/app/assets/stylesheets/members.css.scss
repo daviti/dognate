@@ -25,6 +25,7 @@ body {
 #container {
 	display: block;	
 	overflow: auto;
+	height: 100%
 }
 
 	#wishmodal{
@@ -81,7 +82,7 @@ body {
 		width: 100%;
 		max-width: 1920px;
 		position: relative;
-		height: auto;
+		height: 100%;
 
 
 
@@ -111,14 +112,14 @@ body {
 
 	}
 
-#middle, #form, #article {
+/* #middle, #form, #article {
 	height: auto;
 	position: absolute;
 	text-align: center;
 	top :150px;
 	width: 100%;
 	margin-bottom: 30px;
-}
+} */
 
 #register {
 	input{
@@ -170,7 +171,7 @@ body {
 			  height: 458px; 
 			  position: absolute; 
 			  text-align: center; 
-			  top: 0px; 
+			   
 			  width: 100%; 
 
 			}
@@ -225,13 +226,13 @@ body {
 	}
 
 	#supply_table, #wish_table {
-		margin: 10px;
+		margin: 0px auto;
 		max-height: 600px;
 		min-width: 400px;
 		min-height: 100px;
 		display: block;
 		vertical-align: top;
-		max-width: 500px;
+		max-width: 600px;
 		overflow-x: hidden;	
 		
 	}
