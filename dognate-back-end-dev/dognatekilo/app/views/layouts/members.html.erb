@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dognate</title>
+  <%= stylesheet_link_tag    "members", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "jquery","//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js", "members1"  %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<% if alert %>
+  <p class="alert alert-error"><%= alert %></p>
+<% end %>
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+	<%= yield :navbar %>
+</div>
+	<section>
+		<div id="sliderFrame">
+	        <div id="slider">
+	            <p> <%= image_tag "slider-1.jpg" %> </p>
+	            <p> <%= image_tag "slider-2.jpg" %> </p>
+	            <p> <%= image_tag "slider-3.jpg" %> </p>
+	            <p> <%= image_tag "slider-4.jpg" %> </p>
+	        </div>
+	        <!--Custom navigation buttons on both sides-->
+	        <div class="group1-Wrapper">
+	            <a onclick="imageSlider.previous()" class="group1-Prev"></a>
+	            <a onclick="imageSlider.next()" class="group1-Next"></a>
+	        </div>
+	        <!--nav bar-->
+	        <div style="text-align:center;padding:20px;z-index:20;">
+	            <a onclick="imageSlider.previous()" class="group2-Prev"></a>
+	            <a id='auto' onclick="switchAutoAdvance()"></a>
+	            <a onclick="imageSlider.next()" class="group2-Next"></a>
+	        </div>
+	    </div>
+	     <script type="text/javascript">
+        //The following script is for the group 2 navigation buttons.
+        function switchAutoAdvance() {
+            imageSlider.switchAuto();
+            switchPlayPauseClass();
+        }
+        function switchPlayPauseClass() {
+            var auto = document.getElementById('auto');
+            var isAutoPlay = imageSlider.getAuto();
+            auto.className = isAutoPlay ? "group2-Pause" : "group2-Play";
+            auto.title = isAutoPlay ? "Pause" : "Play";
+        }
+        switchPlayPauseClass();
+    	</script>
+	</section>
+<div data-spy="scroll" data-target="#navbar">
+	<section id="intro" data-type="background" data-speed="20">
+		<div id="middle" class="row-fluid">
+			<%= yield :intro %>
+		</div>
+	</section>
+	<section id="home" data-type="background" data-speed="8">
+		<div id="form">
+			<%= yield :index %>
+		</div>
+	</section>
+	<section id="about" data-type="background" data-speed="20">
+		<div id="article">
+			<%= yield :supply_table %>
+			
+		</div>
+	</section>
+	<section id="ender" data-type="background" data-speed="8">
+		<div id="article">
+			<%= yield :ender %>
+		</div>
+	</section>
+	<section id="footer" data-type="background" data-speed="10">
+		<div id="article">
+			<%= yield :footer %>
+		</div>	
+	</section>
+</div>
+<%= yield :supply_modal %>
+</body>
+</html>
