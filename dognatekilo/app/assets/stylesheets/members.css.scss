@@ -100,28 +100,28 @@ body {
 
 
 
-		#middle {
-			height: auto;
-			position: absolute;
-			text-align: center;
-			top :100px;
-			width: 100%;
-			margin-bottom: 30px;
-		
-				#left, #right, #center {
-					margin: auto 20px;
-					margin-bottom: 10px;
-					min-height: 200px;
-					max-height: 500px;
-					min-width: 200px;
-					max-width: 300px;
-					display: inline-block;
-					vertical-align: top;
-					border: none;
+			#middle {
+				height: auto;
+				position: absolute;
+				text-align: center;
+				top :100px;
+				width: 100%;
+				margin-bottom: 30px;
+			
+					#left, #right, #center {
+						margin: auto 20px;
+						margin-bottom: 10px;
+						min-height: 200px;
+						max-height: 500px;
+						min-width: 200px;
+						max-width: 300px;
+						display: inline-block;
+						vertical-align: top;
+						border: none;
 
-				}
+					}
 
-		}
+			}
 
 	}
 
@@ -154,7 +154,7 @@ body {
 		
 		#form{ 
 			  height: 458px; 
-			  position: absolute; 
+			  position: relative; 
 			  text-align: center; 
 			  top: 150px; 
 			  width: 100%; 
@@ -182,16 +182,13 @@ body {
 		
 		 #about_article{ 
 			  height: 458px; 
-			  position: absolute; 
+			  position: relative; 
 			  text-align: center; 
 			  top: 0px; 
 			  width: 100%; 
-
+			  display: block;
+			  margin-bottom: 20px;
 			}
-		  .my_carousel {
-			  	background:white;
-			  	z-index: 10000;
-			  }
 	}
 	#edit_register {
 		background: rgba(255, 255, 250, 0.3);
@@ -230,6 +227,9 @@ body {
 	}
 
 	.my_carousel {
+
+		background:white;
+	  	
 		min-height: 400px;
 		background: center;
 		 -webkit-background-size: cover;
@@ -246,7 +246,7 @@ body {
 		min-height: 100px;
 		display: block;
 		vertical-align: top;
-		max-width: 500px;
+		max-width: 800px;
 		overflow-x: hidden;	
 		
 	}
@@ -278,24 +278,24 @@ body {
 		 position: relative; 
 	
 
-	.jumbotron {
-background: #358CCE;
-color: #FFF;
-border-radius: 0px;
-}
-.jumbotron-sm { padding-top: 24px;
-padding-bottom: 24px; }
-.jumbotron small {
-color: #FFF;
-}
-.h1 small {
-font-size: 24px;
-}
+			.jumbotron {
+				background: #358CCE;
+				color: #FFF;
+				border-radius: 0px;
+				}
+			.jumbotron-sm { 
+				padding-top: 24px;
+				padding-bottom: 24px; }
+				.jumbotron small {
+				color: #FFF;
+				}
+			.h1 small {
+				font-size: 24px;
+				}
 	}
 
 	#footer { 
 		background: #292C30 0 no-repeat;
-		
 		 min-height: 400px; 
 		 height: auto; 
 		 margin: 0px auto; 
@@ -304,9 +304,6 @@ font-size: 24px;
 		 position: relative;
 		 display:block;
 		 overflow:auto; 
-		
-			  
-
 			
 
 	}
