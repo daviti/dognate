@@ -9,22 +9,22 @@
       	<img src="#" id="img_prev" alt="your image">
 <form action="/supplies" method="post" enctype="multipart/form-data">
 	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-	<input class="" id="img_input" type="file" onchange="readURL(this);" name="photo">
-	<input  type="text" name="name" placeholder="name of item"><br>
+	<input class="" id="img_input" type="file" onchange="readURL(this);" name="supply[photo]">
+	<input  type="text" name="supply[name]" placeholder="name of item"><br>
 	<textarea name="description" cols="30" rows="3" placeholder="enter description here"></textarea><br>
-	<select name="condition">
+	<select name="supply[condition]">
 		<option value="new">new</option>
 		<option value="like new">like new</option>
 		<option value="good">good</option>
 		<option value="fair">fair</option>
 		<option value="poor">poor</option>
 	</select><br>
-	<select name="category_id">
+	<select name="supply[category_id]">
 		<% @categories.each do |category| %>
 			<option value="<%=category.id%>"><%=category.name%></option>
 		<% end %>
 	</select><br>
-	<input type="number" name="quantity" placeholder="0" max="100" min="0"><br>
+	<input type="number" name="supply[quantity]" placeholder="0" max="100" min="0"><br>
 	<input type="submit" value="add new supply" class="btn btn-success">
 </form>
       </div>

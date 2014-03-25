@@ -12,7 +12,7 @@
 			<thead>
 				<tr>
 					<th>Image</th>
-					<th>Category ID</th>
+					<th>Category</th>
 					<th>Item</th>
 					<th>Description</th>
 					<th>Quality</th>
@@ -22,15 +22,17 @@
 			<tbody>
 			<% if @supplies != nil %>
 				<% @supplies.each do |supply| %>
+				
 				<tr>
 					<td>
-						<%= image_tag supply.photo.url(:thumb) %>
+						<%= image_tag supply.photo.url(:medium) %>
 					</td>
 					<td>
-						<%= supply.category_id %>
-					<%# if @categories.find(supply.category_id).name != nil %>
-						<%#= @categories.find(supply.category_id).name %>
-					<%# end %>
+				<% @categories.each do |category| %>
+					<% if category.id == supply.category_id %>
+						<%= category.name %>
+					<% end %>
+				<% end %>
 					</td>
 					<td>
 						<%= supply.name %>
@@ -49,7 +51,7 @@
 						<%= link_to "edit", "/supplies/#{supply.id}/edit" %>
 					</td>
 					<td>
-						<%= link_to "delete", "/supplies/#{supply.id}", :method=>:delete %>
+						<%= link_to "delete", :method=>:delete %>
 					</td>
 					<% end %>
 				</tr>

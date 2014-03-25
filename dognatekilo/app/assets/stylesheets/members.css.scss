@@ -23,7 +23,8 @@ body {
 }
 
 #container {
-		
+	display: block;	
+	overflow: auto;
 }
 
 	#wishmodal{
@@ -74,12 +75,14 @@ body {
 	#intro {
 		background: lightblue 50% 0 no-repeat fixed;
 		min-height: 800px;
+		display: block;
 		overflow: auto;
 		margin: 0px auto;
 		width: 100%;
 		max-width: 1920px;
 		position: relative;
 		height: auto;
+
 
 
 
@@ -148,15 +151,19 @@ body {
  
 	#about { 
 		background:  50% 0 no-repeat;
-		
+		z-index: 1000;
 		 min-height: 1200px; 
-		 height: auto; 
+		 height: 100%; 
 		 margin: 0px auto; 
 		 width: 100%; 
 		 max-width: 1920px; 
 		 position: relative; 
 		 -webkit-box-shadow: 50px 0 100px rgba(0,0,0,0.8);
 		 box-shadow: 0 0 -50px rgba(0,0,0,0.8);
+		 display:block;
+		 clear: both;
+		 overflow: auto;
+
 
 		
 		 #about_article{ 
@@ -219,12 +226,14 @@ body {
 
 	#supply_table, #wish_table {
 		margin: 10px;
-		max-height: 400px;
-		max-width: 500px;
+		max-height: 600px;
 		min-width: 400px;
 		min-height: 100px;
-		display: inline-block;
+		display: block;
 		vertical-align: top;
+		max-width: 500px;
+		overflow-x: hidden;	
+		
 	}
 
 	#hidewishes, #hidesupplies {
@@ -238,11 +247,14 @@ body {
 		border-radius: 0px;
 		-webkit-box-shadow: 0px 0 10px rgba(0,0,0,0.8);
 
+
 	}
 
 	#ender { 
 		background: url(http://www.imagebrowse.com/wp-content/uploads/2013/08/interesting-dog-and-white-blanket-wallpaper-backgrounds.jpg)  0 no-repeat;
-		
+		display:block;
+		overflow: auto;
+		clear:both;
 		 min-height: 1000px; 
 		 height: auto; 
 		 margin: 0px auto; 
@@ -271,7 +283,9 @@ body {
 		 margin: 0px auto; 
 		 width: 100%; 
 		 max-width: 1920px; 
-		 position: relative; 
+		 position: relative;
+		 display:block;
+		 overflow:auto; 
 		
 		 #foot_article{ 
 			  height: auto; 
