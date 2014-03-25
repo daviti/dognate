@@ -1,0 +1,69 @@
+<%= content_for :navbar do %>
+
+	<%= render 'navbar' %>
+
+<% end %>
+
+<% content_for :supply_table do %>
+<<<<<<< HEAD
+	<%= render 'supplycarousel' %> <!-- confirmed operational  - cmk -->
+	<h2>What do you want to do?</h2>
+	<%= render 'wishtable' %> <!-- confirmed operational  - cmk -->
+	<%= render 'supplytable' %> <!-- confirmed operational  - cmk --><br>
+<% end %>
+
+<% content_for :supply_modal do %>
+	<%= render 'newsupply' %> <!-- confirmed operational - cmk -->
+<% end %>
+<%# content_for :supply_modal do %>
+	<%#= render 'newsupply' %>
+<%# end %>
+
+<% content_for :wish_modal do %>
+	<%= render 'newwish' %> <!-- confirmed operational - cmk -->
+=======
+	<%= render 'supplycarousel' %>
+	<%= render 'supplytable' %>
+	<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#supplymodal" id="opensupply">
+	  Launch demo modal
+	</button>
+	<%= render 'newwish' %>
+<% end %>
+<% content_for :supply_modal do %>
+	<%= render 'newsupply' %>
+>>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+<% end %>
+
+
+
+<% content_for :index do %>
+	
+	<%= render 'index' %>
+
+	<% if user_signed_in? %>
+	<%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
+	<% else %>
+	<%= link_to 'Login', new_user_session_url %>
+	<%= link_to 'Register', new_user_registration_url %>
+	<% end %>
+
+
+
+<% end %>
+
+<% content_for :intro do %>
+	<%= render 'introcontent' %>
+<% end %>
+
+<% content_for :ender do %>
+	<%= render 'ender' %>
+<% end %>
+
+<% content_for :footer do %>
+	<%= render 'footer' %>
+<% end %>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad

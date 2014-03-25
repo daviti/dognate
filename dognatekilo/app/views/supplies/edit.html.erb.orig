@@ -1,0 +1,25 @@
+<<<<<<< HEAD
+<h1>Edit Your Wish</h1>
+<%= @supply.category_id %>
+<%= simple_form_for @supply, html: { multipart: true } do |f| %>
+<%= f.file_field :photo %>
+<%= f.input :name, label: false, required: true, :input_html => {:value=>@supply.name} %>
+<%= f.input :description, placeholder: "enter description", label: false, required: true %>
+<%= f.input :category_id, collection: @categories %>
+=======
+<h1>add your new supply here</h1>
+<%= simple_form_for @supply do |f| %>
+<%= f.input :name, label: false, required: true, :input_html => {:value=>@supply.name} %>
+<%= f.input :user_id, :as => :hidden, :input_html => {:value=>"#{session[:id]}"}  %>
+<%= f.input :description, placeholder: "enter description", label: false, required: true %>
+>>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+<%= f.input :condition, placeholder: "condition", label: false, :collection=>["new","like new","fair","poor"], required: true %>
+<%= f.input :quantity, placeholder: "quantity",label: false, :collection=>(1..100), required: true %>
+<%= f.submit :submit %>
+<% end %>
+
+<<<<<<< HEAD
+<%= link_to "back", root_url %>
+=======
+<%= link_to "back", root_url%>
+>>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad

@@ -1,0 +1,56 @@
+<div class="modal fade" id="supplymodal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<<<<<<< HEAD
+        <h4 class="modal-title">Add a new item here</h4>
+      </div>
+      <div class="modal-body">
+      	<img src="#" id="img_prev" alt="your image">
+<form action="/supplies" method="post" enctype="multipart/form-data">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	<input class="" id="img_input" type="file" onchange="readURL(this);" name="supply[photo]">
+	<input  type="text" name="supply[name]" placeholder="name of item"><br>
+	<textarea name="description" cols="30" rows="3" placeholder="enter description here"></textarea><br>
+	<select name="supply[condition]">
+=======
+        <h4 class="modal-title">Add a new supply here</h4>
+      </div>
+      <div class="modal-body">
+<form action="/supplies/create" method="post">
+	<input type="hidden" name="user_id" value="<%=session[:id]%>">
+	<input type="text" name="name" placeholder="name of item"><br>
+	<textarea name="description" cols="30" rows="3" placeholder="enter description here"></textarea><br>
+	<select name="condition">
+>>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+		<option value="new">new</option>
+		<option value="like new">like new</option>
+		<option value="good">good</option>
+		<option value="fair">fair</option>
+		<option value="poor">poor</option>
+	</select><br>
+<<<<<<< HEAD
+	<select name="supply[category_id]">
+=======
+	<select name="Category.id">
+>>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+		<% @categories.each do |category| %>
+			<option value="<%=category.id%>"><%=category.name%></option>
+		<% end %>
+	</select><br>
+<<<<<<< HEAD
+	<input type="number" name="supply[quantity]" placeholder="0" max="100" min="0"><br>
+=======
+	<input type="number" name="quantity" placeholder="0" max="100" min="0"><br>
+>>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+	<input type="submit" value="add new supply" class="btn btn-success">
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dognate</title>
+  <%= stylesheet_link_tag    "members", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "jquery","//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js", "members1"  %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<% if alert %>
+  <p class="alert alert-error"><%= alert %></p>
+<<<<<<< HEAD
+  <p class="alert alert-error"><%= error %></p>
+
+=======
+>>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+<% end %>
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+	<%= yield :navbar %>
+</div>
+<<<<<<< HEAD
+<div id="container" data-spy="scroll" data-target="#navbar">
+	<section id="intro" data-type="background" data-speed="20">
+		<% if user_signed_in? %>
+			<h4 id="username" class="pull-left"><%= @user.first_name + " " + @user.last_name %></h4>
+			<% @zip = @user.addresses.pluck(:zipcode).to_s %>
+				<h4 class="pull-left">   <%= @zip.gsub(/[^0-9]/,'') %></h4>
+		<% end %>
+
+		<div id="middle" class="row-fluid">
+			<%= yield :intro %>
+			<%= yield %>
+			
+=======
+<div data-spy="scroll" data-target="#navbar">
+	<section id="intro" data-type="background" data-speed="20">
+		<div id="middle" class="row-fluid">
+			<%= yield :intro %>
+>>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+		</div>
+	</section>
+	<section id="home" data-type="background" data-speed="8">
+		<div id="form">
+			<%= yield :index %>
+		</div>
+	</section>
+	<section id="about" data-type="background" data-speed="20">
+<<<<<<< HEAD
+		<div id="about_article">
+=======
+		<div id="article">
+>>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+			<%= yield :supply_table %>
+			
+		</div>
+	</section>
+	<section id="ender" data-type="background" data-speed="8">
+<<<<<<< HEAD
+		<div id="ender_article">
+			<%= yield :ender %>
+		</div>
+	</section>
+	<section class="" id="footer" data-type="background" data-speed="10">
+		<div class="" id="foot_article">
+=======
+		<div id="article">
+			<%= yield :ender %>
+		</div>
+	</section>
+	<section id="footer" data-type="background" data-speed="10">
+		<div id="article">
+>>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+			<%= yield :footer %>
+		</div>	
+	</section>
+
+</div>
+<%= yield :supply_modal %>
+<<<<<<< HEAD
+<%= yield :wish_modal %>
+=======
+>>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+</body>
+</html>

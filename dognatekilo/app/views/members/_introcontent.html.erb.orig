@@ -1,0 +1,55 @@
+<<<<<<< HEAD
+<h3>They need our love and care. 
+<p>It is so easy to make them happy!.<p> </h3>
+=======
+
+<h1>BLARBLEGARBLE</h1>
+>>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+<div id="left" class="col-md-3 col-sm-6 col-xs-12 container-fluid">
+	<div class="thumbnail">
+		<img src="http://lorempixel.com/300/300" alt="">
+		<div class="caption">
+<<<<<<< HEAD
+			<h3>Offer List</h3>
+			<p></p>	
+=======
+			<h3>Something</h3>
+			<p>Shabby chic craft beer slow-carb quis. Synth lomo readymade cupidatat, Brooklyn Thundercats incididunt. Selfies lomo eiusmod, sriracha meggings keytar hella scenester sartorial commodo try-hard banh.</p>	
+>>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+		</div>
+	</div>
+</div>
+<div id="center" class="col-md-3 col-sm-6 col-xs-12 container-fluid">
+	<div class="thumbnail">
+		<img src="http://lorempixel.com/300/300" alt="">
+		<div class="caption">
+<<<<<<< HEAD
+			<h3>Wish List</h3>
+			<p></p>
+=======
+			<h3>Something else</h3>
+			<p>Etsy pork belly viral commodo letterpress. Wolf letterpress iPhone tattooed. Fanny pack VHS est Carles.</p>
+>>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+		</div>	
+	</div>
+</div>
+<div id="right" class="col-md-3 col-sm-6 col-xs-12 container-fluid">
+	<div class="thumbnail">
+		<img src="http://lorempixel.com/300/300" alt="">
+		<div class="caption">
+<<<<<<< HEAD
+			<h3>Volunteer</h3>
+			<p></p>
+		</div>	
+	</div>
+</div>
+	
+=======
+			<h3>Another Something</h3>
+			<p>Beard occupy Thundercats seitan, sed dreamcatcher next level vero paleo assumenda. Shoreditch cornhole salvia chillwave.</p>
+		</div>	
+	</div>
+</div>
+
+>>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+

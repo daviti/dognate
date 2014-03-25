@@ -1,0 +1,69 @@
+<<<<<<< HEAD
+
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <div class="container">
+    <div class="row destacados">
+        <div class="col-md-4">
+            <div>
+                <img src="http://lorempixel.com/200/200/abstract/1/" alt="Texto Alternativo" class="img-circle img-thumbnail">
+                <h2>David Ortiz</h2>
+                <p>San Diego, CA.</p>
+                <a href="#" class="btn btn-primary" title="Enlace">Leer más »</a>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div>
+                <img src="http://lorempixel.com/200/200/abstract/2/" alt="Texto Alternativo" class="img-circle img-thumbnail">
+                <h2>Will Russ</h2>
+                <p>Arcata, CA.</p>
+                <a href="#" class="btn btn-primary" title="Enlace">Leer más »</a>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div>
+                <img src="http://lorempixel.com/200/200/abstract/3/" alt="Texto Alternativo" class="img-circle img-thumbnail">
+                <h2>Chung Man Kim</h2>
+                <p>Virginia. VA</p>
+                <a href="#" class="btn btn-primary" title="Enlace">Leer más »</a>
+            </div>
+        </div>
+
+            <div class="col-md-4">
+            <div>
+                <img src="http://lorempixel.com/200/200/abstract/3/" alt="Texto Alternativo" class="img-circle img-thumbnail">
+                <h2>Nicandro Martinez</h2>
+                <p>Guadalajara Mexico.</p>
+                <a href="#" class="btn btn-primary" title="Enlace">Leer más »</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.destacados{
+    padding: 10px 0;
+    text-align: center;
+}
+.destacados > div > div{
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+.destacados > div:hover > div{
+    margin-top: -10px;
+    border: 1px solid rgb(200, 200, 200);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 2px 2px;
+    background: rgba(200, 200, 200, 0.1);
+    transition: 0.5s;
+}
+</style>
+
+
+=======
+<div>
+	<h2>This is the last div</h2>
+</div>
+>>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad

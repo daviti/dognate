@@ -1,0 +1,412 @@
+// Place all the styles related to the members controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'bootstrap';
+
+html {
+	overflow-x: hidden;	
+}
+
+
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+<<<<<<< HEAD
+	margin-top: 70px;
+=======
+	padding-top: 70px;
+>>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+	width: 100%;
+
+	.modal-open {
+		overflow: visible;
+	}
+
+}
+
+<<<<<<< HEAD
+#container {
+	display: block;	
+	overflow: auto;
+}
+
+	#wishmodal{
+		text-align: center;
+		display: none;
+
+	}
+
+	#supplymodal{
+		margin: 0px auto;
+		
+		text-align: center;
+		display: none;
+		#img_prev {
+			width: 200px;
+			height: 200px;
+		}
+		#img_input {
+			margin-left: 40px;
+		}
+
+=======
+	#supplymodal{
+		z-index: 400000;
+		background: black;
+>>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+	}
+
+	.navbar {
+		background: rgba(255, 255, 254, 0.4);
+		padding: 5px 10px;
+<<<<<<< HEAD
+		
+=======
+>>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+
+		.nav {
+			margin-top: 10px;
+		}
+		#leftnav {
+			color: green;
+<<<<<<< HEAD
+			margin-top: 0px;
+=======
+>>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+		}
+		.btn {
+			padding: 3px;
+		}
+<<<<<<< HEAD
+		.navlist {
+			vertical-align:top;
+			ul.nav li a {
+				background: rgba(255,255,255,0.0)
+			}
+		}
+=======
+>>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+	}
+
+
+	#intro {
+<<<<<<< HEAD
+		background: lightblue 50% 0 no-repeat fixed;
+		min-height: 800px;
+		display: block;
+		overflow: auto;
+=======
+		background: white 50% 0 no-repeat fixed;
+		min-height: 800px;
+		height: auto;
+>>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+		margin: 0px auto;
+		width: 100%;
+		max-width: 1920px;
+		position: relative;
+<<<<<<< HEAD
+		height: auto;
+
+
+
+=======
+		overflow: auto;
+>>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+
+		#middle {
+			height: auto;
+			position: absolute;
+			text-align: center;
+			top :100px;
+			width: 100%;
+			margin-bottom: 30px;
+		
+				#left, #right, #center {
+					margin: auto 20px;
+					margin-bottom: 10px;
+					min-height: 200px;
+					max-height: 500px;
+					min-width: 200px;
+					max-width: 300px;
+					display: inline-block;
+					vertical-align: top;
+					border: none;
+
+				}
+
+		}
+
+	}
+
+#middle, #form, #article {
+	height: auto;
+	position: absolute;
+	text-align: center;
+	top :150px;
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+<<<<<<< HEAD
+#register {
+	input{
+		width:300px;
+	}
+}
+
+=======
+>>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+
+	#home { 
+		  background: url(http://www.pageresource.com/wallpapers/wallpaper/dog-abyss_1571739.jpg)50% 0 no-repeat;
+		  min-height: 1000px;
+		  height: auto;
+		  margin: 0px auto; 
+		  width: 100%; 
+		  max-width: 1920px; 
+		  position: relative;
+		  -webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
+		  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+		
+		#form{ 
+			  height: 458px; 
+			  position: absolute; 
+			  text-align: center; 
+			  top: 150px; 
+			  width: 100%; 
+			  margin-bottom: 30px;
+			}
+
+	}
+ 
+	#about { 
+<<<<<<< HEAD
+		background:  50% 0 no-repeat;
+		z-index: 1000;
+		 min-height: 1200px; 
+		 height: 100%; 
+=======
+		background: url(http://www.imagebrowse.com/wp-content/uploads/2013/08/interesting-dog-and-white-blanket-wallpaper-backgrounds.jpg) 50% 0 no-repeat;
+		
+		 min-height: 1200px; 
+		 height: auto; 
+>>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+		 margin: 0px auto; 
+		 width: 100%; 
+		 max-width: 1920px; 
+		 position: relative; 
+		 -webkit-box-shadow: 50px 0 100px rgba(0,0,0,0.8);
+		 box-shadow: 0 0 -50px rgba(0,0,0,0.8);
+<<<<<<< HEAD
+		 display:block;
+		 clear: both;
+		 overflow: auto;
+
+
+		
+		 #about_article{ 
+=======
+
+		
+		 #article{ 
+>>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+			  height: 458px; 
+			  position: absolute; 
+			  text-align: center; 
+			  top: 0px; 
+			  width: 100%; 
+
+			}
+<<<<<<< HEAD
+		  .my_carousel {
+			  	background:white;
+			  	z-index: 10000;
+			  }
+	}
+	#edit_register {
+		background: rgba(255, 255, 250, 0.3);
+		padding: 10px;
+		max-width: 540px;	
+		margin: 0 auto;
+	}
+
+	.form-horizontal {
+		
+		text-align: center;
+		display:inline-block;
+
+		margin-right: 10px;
+		label {
+			margin-right: 10px;
+			font-weight: bold;
+			margin-top: 15px;
+		}
+
+		input{
+			
+			margin-top: 15px;
+		
+		}
+		span {
+			display: block;
+		}
+		.btn {
+			display: block;
+			width: 200px;
+			position: relative;
+			left: 170px;
+		}
+	
+	}
+
+	.my_carousel {
+=======
+
+	}
+
+	.carousel {
+>>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+		min-height: 400px;
+		background: center;
+		 -webkit-background-size: cover;
+	 	 -moz-background-size: cover;
+	 	 -o-background-size: cover;
+	 	 background-size: cover;
+<<<<<<< HEAD
+	 	  -webkit-box-shadow: 50px 0 100px rgba(0,0,0,0.8);
+	}
+
+	#supply_table, #wish_table {
+		margin: 10px;
+		max-height: 600px;
+		min-width: 400px;
+		min-height: 100px;
+		display: block;
+		vertical-align: top;
+		max-width: 500px;
+		overflow-x: hidden;	
+		
+	}
+
+	#hidewishes, #hidesupplies {
+		border: 1px solid black;
+		font-size: 14px;
+		font-weight:bold;
+		background: rgba(20,219,219,0.2);
+		width: 90px;
+		padding: 4px;
+		margin: 0px auto;
+		border-radius: 0px;
+		-webkit-box-shadow: 0px 0 10px rgba(0,0,0,0.8);
+
+
+	}
+
+	#ender { 
+		background: url(http://www.imagebrowse.com/wp-content/uploads/2013/08/interesting-dog-and-white-blanket-wallpaper-backgrounds.jpg)  0 no-repeat;
+		display:block;
+		overflow: auto;
+		clear:both;
+=======
+	}
+
+	#supply_table, #offer_table {
+		border: 1px solid black;
+		margin: 10px;
+		max-height: 400px;
+		max-width: 500px;
+		min-width: 400px;
+		min-height: 100px;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	#ender { 
+		background: url()  0 no-repeat;
+		
+>>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+		 min-height: 1000px; 
+		 height: auto; 
+		 margin: 0px auto; 
+		 width: 100%; 
+<<<<<<< HEAD
+		 max-width: 1900px; 
+		 position: relative; 
+	
+
+			.jumbotron {
+		background: #358CCE;
+		color: #FFF;
+		border-radius: 0px;
+		}
+		.jumbotron-sm { padding-top: 24px;
+		padding-bottom: 24px; }
+		.jumbotron small {
+		color: #FFF;
+		}
+		.h1 small {
+		font-size: 24px;
+		}
+	}
+
+	#footer { 
+		background: #292C30 0 no-repeat;
+		
+		 min-height: 400px; 
+		 height: auto; 
+		 margin: 0px auto; 
+		 width: 100%; 
+		 max-width: 1920px; 
+		 position: relative;
+		 display:block;
+		 overflow:auto; 
+		
+			  
+
+			
+
+	}
+
+
+=======
+		 max-width: 1920px; 
+		 position: relative; 
+		 -webkit-box-shadow: 50px 0 100px rgba(0,0,0,0.8);
+		 box-shadow: 0 0 -50px rgba(0,0,0,0.8);
+
+		
+		 #article{ 
+			  height: 458px; 
+			  position: absolute; 
+			  text-align: center; 
+			  top: 100px; 
+			  width: 100%; 
+
+			}
+
+	}
+
+	#footer { 
+	background: gray  0 no-repeat;
+	
+	 min-height: 400px; 
+	 height: auto; 
+	 margin: 0px auto; 
+	 width: 100%; 
+	 max-width: 1920px; 
+	 position: relative; 
+	
+	 #article{ 
+		  height: 458px; 
+		  position: absolute; 
+		  text-align: center; 
+		  top: 100px; 
+		  width: 100%; 
+
+		}
+
+	}
+
+>>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
