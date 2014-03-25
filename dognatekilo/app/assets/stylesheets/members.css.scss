@@ -1,0 +1,300 @@
+// Place all the styles related to the members controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'bootstrap';
+
+html {
+	overflow-x: hidden;	
+}
+
+
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	margin-top: 70px;
+	width: 100%;
+
+	.modal-open {
+		overflow: visible;
+	}
+
+}
+
+#container {
+	display: block;	
+	overflow: auto;
+}
+
+	#wishmodal{
+		text-align: center;
+		display: none;
+
+	}
+
+	#supplymodal{
+		margin: 0px auto;
+		
+		text-align: center;
+		display: none;
+		#img_prev {
+			width: 200px;
+			height: 200px;
+		}
+		#img_input {
+			margin-left: 40px;
+		}
+
+	}
+
+	.navbar {
+		background: rgba(255, 255, 254, 0.4);
+		padding: 5px 10px;
+		
+
+		.nav {
+			margin-top: 10px;
+		}
+		#leftnav {
+			color: green;
+			margin-top: 0px;
+		}
+		.btn {
+			padding: 3px;
+		}
+		.navlist {
+			vertical-align:top;
+			ul.nav li a {
+				background: rgba(255,255,255,0.0)
+			}
+		}
+	}
+
+
+	#intro {
+		background: lightblue 50% 0 no-repeat fixed;
+		min-height: 800px;
+		display: block;
+		overflow: auto;
+		margin: 0px auto;
+		width: 100%;
+		max-width: 1920px;
+		position: relative;
+		height: auto;
+
+
+
+
+		#middle {
+			height: auto;
+			position: absolute;
+			text-align: center;
+			top :100px;
+			width: 100%;
+			margin-bottom: 30px;
+		
+				#left, #right, #center {
+					margin: auto 20px;
+					margin-bottom: 10px;
+					min-height: 200px;
+					max-height: 500px;
+					min-width: 200px;
+					max-width: 300px;
+					display: inline-block;
+					vertical-align: top;
+					border: none;
+
+				}
+
+		}
+
+	}
+
+#middle, #form, #article {
+	height: auto;
+	position: absolute;
+	text-align: center;
+	top :150px;
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+#register {
+	input{
+		width:300px;
+	}
+}
+
+
+	#home { 
+		  background: url(http://www.pageresource.com/wallpapers/wallpaper/dog-abyss_1571739.jpg)50% 0 no-repeat;
+		  min-height: 1000px;
+		  height: auto;
+		  margin: 0px auto; 
+		  width: 100%; 
+		  max-width: 1920px; 
+		  position: relative;
+		  -webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
+		  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+		
+		#form{ 
+			  height: 458px; 
+			  position: absolute; 
+			  text-align: center; 
+			  top: 150px; 
+			  width: 100%; 
+			  margin-bottom: 30px;
+			}
+
+	}
+ 
+	#about { 
+		background:  50% 0 no-repeat;
+		z-index: 1000;
+		 min-height: 1200px; 
+		 height: 100%; 
+		 margin: 0px auto; 
+		 width: 100%; 
+		 max-width: 1920px; 
+		 position: relative; 
+		 -webkit-box-shadow: 50px 0 100px rgba(0,0,0,0.8);
+		 box-shadow: 0 0 -50px rgba(0,0,0,0.8);
+		 display:block;
+		 clear: both;
+		 overflow: auto;
+
+
+		
+		 #about_article{ 
+			  height: 458px; 
+			  position: absolute; 
+			  text-align: center; 
+			  top: 0px; 
+			  width: 100%; 
+
+			}
+		  .my_carousel {
+			  	background:white;
+			  	z-index: 10000;
+			  }
+	}
+	#edit_register {
+		background: rgba(255, 255, 250, 0.3);
+		padding: 10px;
+		max-width: 540px;	
+		margin: 0 auto;
+	}
+
+	.form-horizontal {
+		
+		text-align: center;
+		display:inline-block;
+
+		margin-right: 10px;
+		label {
+			margin-right: 10px;
+			font-weight: bold;
+			margin-top: 15px;
+		}
+
+		input{
+			
+			margin-top: 15px;
+		
+		}
+		span {
+			display: block;
+		}
+		.btn {
+			display: block;
+			width: 200px;
+			position: relative;
+			left: 170px;
+		}
+	
+	}
+
+	.my_carousel {
+		min-height: 400px;
+		background: center;
+		 -webkit-background-size: cover;
+	 	 -moz-background-size: cover;
+	 	 -o-background-size: cover;
+	 	 background-size: cover;
+	 	  -webkit-box-shadow: 50px 0 100px rgba(0,0,0,0.8);
+	}
+
+	#supply_table, #wish_table {
+		margin: 10px;
+		max-height: 600px;
+		min-width: 400px;
+		min-height: 100px;
+		display: block;
+		vertical-align: top;
+		max-width: 500px;
+		overflow-x: hidden;	
+		
+	}
+
+	#hidewishes, #hidesupplies {
+		border: 1px solid black;
+		font-size: 14px;
+		font-weight:bold;
+		background: rgba(20,219,219,0.2);
+		width: 90px;
+		padding: 4px;
+		margin: 0px auto;
+		border-radius: 0px;
+		-webkit-box-shadow: 0px 0 10px rgba(0,0,0,0.8);
+
+
+	}
+
+	#ender { 
+		background: url(http://www.imagebrowse.com/wp-content/uploads/2013/08/interesting-dog-and-white-blanket-wallpaper-backgrounds.jpg)  0 no-repeat;
+		display:block;
+		overflow: auto;
+		clear:both;
+		 min-height: 1000px; 
+		 height: auto; 
+		 margin: 0px auto; 
+		 width: 100%; 
+		 max-width: 1900px; 
+		 position: relative; 
+	
+
+	.jumbotron {
+background: #358CCE;
+color: #FFF;
+border-radius: 0px;
+}
+.jumbotron-sm { padding-top: 24px;
+padding-bottom: 24px; }
+.jumbotron small {
+color: #FFF;
+}
+.h1 small {
+font-size: 24px;
+}
+	}
+
+	#footer { 
+		background: #292C30 0 no-repeat;
+		
+		 min-height: 400px; 
+		 height: auto; 
+		 margin: 0px auto; 
+		 width: 100%; 
+		 max-width: 1920px; 
+		 position: relative;
+		 display:block;
+		 overflow:auto; 
+		
+			  
+
+			
+
+	}
+
+

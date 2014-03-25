@@ -1,0 +1,64 @@
+<% if user_signed_in? %>
+
+<div id="supply_table" class="col-md-6">
+	<h4 id="supply" class="">Supply</h4>
+	<div id="supplies">
+		<div id="hidesupplies" class="pull-left btn">Hide Table</div>	
+		<button class="pull-right btn btn-primary btn-lg" data-toggle="modal" data-target="#supplymodal">
+	  Add New Supply
+	</button>
+	</div>
+		<table class="table table-responsive table-striped" id="supplieslist">
+			<thead>
+				<tr>
+					<th>Image</th>
+					<th>Category</th>
+					<th>Item</th>
+					<th>Description</th>
+					<th>Quality</th>
+					<th>Quantity</th>
+				</tr>
+			</thead>
+			<tbody>
+			<% if @supplies != nil %>
+				<% @supplies.each do |supply| %>
+				
+				<tr>
+					<td>
+						<%= image_tag supply.photo.url(:medium) %>
+					</td>
+					<td>
+				<% @categories.each do |category| %>
+					<% if category.id == supply.category_id %>
+						<%= category.name %>
+					<% end %>
+				<% end %>
+					</td>
+					<td>
+						<%= supply.name %>
+					</td>
+					<td>
+						<%= supply.description %>
+					</td>
+					<td>
+						<%= supply.condition %>
+					</td>
+					<td>
+						<%= supply.quantity %>
+					</td>
+					<% if current_user.id == supply.user_id %>
+					<td>
+						<%= link_to "edit", "/supplies/#{supply.id}/edit" %>
+					</td>
+					<td>
+						<%= link_to "delete", :method=>:delete %>
+					</td>
+					<% end %>
+				</tr>
+				<% end %>
+			<% end %>
+			</tbody>
+		</table>
+		
+</div>
+<% end %>
