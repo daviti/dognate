@@ -75,9 +75,9 @@ $(document).ready(function() {
 	//	});
 
 		//for the navbar
-		$('.dropdown-toggle').dropdown()
+		$('.dropdown-toggle').dropdown();
 
-		$('#endertab').removeClass('.active')
+		$('#endertab').removeClass('.active');
 
 		$('#newwish').hide();
 
@@ -87,7 +87,17 @@ $(document).ready(function() {
 
 		$('#close_wish').click(function(){
 			$('#newwish').slideUp();
-		})
+		});
+
+		$('#newsupply').hide();
+
+		$('#show_supply').click(function(){
+			$('#newsupply').slideDown();
+		});
+
+		$('#close_supply').click(function(){
+			$('#newsupply').slideUp();
+		});
 
 		
 });
