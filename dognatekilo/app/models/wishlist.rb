@@ -6,4 +6,14 @@ class Wishlist < ActiveRecord::Base
   belongs_to :user
 
   validates :title, :description, :presence => true
+
+  	def self.search(search)
+		if search
+			where('title LIKE ?', "%#{search}%") 
+		else
+			scoped
+		end
+	end
+
+	#self.per_page = 10
 end

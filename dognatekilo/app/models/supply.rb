@@ -1,5 +1,5 @@
 class Supply < ActiveRecord::Base
-  has_attached_file :photo, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/thumb/missing.png"
+  has_attached_file :photo, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/assets/images/thumb/missing.png"
   validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
 
 
@@ -10,5 +10,14 @@ class Supply < ActiveRecord::Base
 
   validates :quantity, numericality: true, inclusion: { in: 1..100 }
 
+  	def self.search(search)
+		if search
+			where('name LIKE ?', "%#{search}%")
+		else
+			scoped
+		end
+	end
+
+	#self.per_page = 10
 
 end

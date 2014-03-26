@@ -1,22 +1,18 @@
-<% if user_signed_in? %>
+<%= hidden_field_tag :direction, params[:direction] %>
+<%= hidden_field_tag :sort, params[:sort] %>	
 
-<div id="supply_table" class="col-md-6">
-	<h4 id="supply" class="">Supply</h4>
-	<div id="supplies">
-		<div id="hidesupplies" class="pull-left btn">Hide Table</div>	
-		<button class="pull-right btn btn-primary btn-lg" data-toggle="modal" data-target="#supplymodal">
-	  Add New Supply
-	</button>
-	</div>
+
+<%= will_paginate @supplies %>	
 		<table class="table table-responsive table-striped" id="supplieslist">
 			<thead>
 				<tr>
 					<th>Image</th>
-					<th>Category</th>
-					<th>Item</th>
-					<th>Description</th>
-					<th>Quality</th>
-					<th>Quantity</th>
+					<th>Category<%#= supply_sortable "category", "Category" %></th>
+					<th><%= supply_sortable "name", "Item" %></th>
+					<th><%= supply_sortable "description", "Description" %></th>
+					<th><%= supply_sortable "condition", "Quality" %></th>
+					<th><%= supply_sortable "quantity", "Quantity" %></th>
+					<th><%= supply_sortable "updated_at", "Date Posted" %></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -25,14 +21,14 @@
 				
 				<tr>
 					<td>
-						<%= image_tag supply.photo.url(:medium) %>
+						<%= image_tag supply.photo.url(:thumb) %>
 					</td>
 					<td>
 				<% @categories.each do |category| %>
 					<% if category.id == supply.category_id %>
 						<%= category.name %>
-					<% end %>
-				<% end %>
+					<% end %> <!-- end of category name check -->
+				<% end %> <!-- end of category.each split -->
 					</td>
 					<td>
 						<%= supply.name %>
@@ -46,6 +42,10 @@
 					<td>
 						<%= supply.quantity %>
 					</td>
+					<td>
+						<%= supply.updated_at.strftime("%B %e, %Y") %>
+					</td>
+				<% if user_signed_in? %>
 					<% if current_user.id == supply.user_id %>
 					<td>
 						<%= link_to "edit", "/supplies/#{supply.id}/edit" %>
@@ -53,12 +53,16 @@
 					<td>
 						<%= link_to "delete", :method=>:delete %>
 					</td>
-					<% end %>
+					<% else %>
+						<td></td>
+						<td></td>
+					<% end %> <!-- end of user comparison for edit/delete -->
+
+				<% end %><!--  end of user_signed_in check -->
 				</tr>
-				<% end %>
-			<% end %>
+				<% end %> <!-- end of supplies.each -->
+			<% end %> <!-- end of supply nil check -->
 			</tbody>
-		</table>
-		
-</div>
-<% end %>
+		</table>	
+
+</div><!--  end of supply_table div -->

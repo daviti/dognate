@@ -1,4 +1,5 @@
 class SuppliesController < ApplicationController
+	 
 	def index
 		
 	end
