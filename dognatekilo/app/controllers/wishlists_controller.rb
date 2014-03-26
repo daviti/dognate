@@ -1,4 +1,5 @@
 class WishlistsController < ApplicationController
+
 		def new
 			@wishlist = current_user.wishlists.new
 		end

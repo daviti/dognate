@@ -1,9 +1,4 @@
 
-// function set_body_width() {
-// 	var ww = $(window).width();
-// 	$('body').width(ww); //evaluates to body width = window width
-// }
-
 //FUNCTIONS GO UP HERE
 //FUNCTION SECTION
 //function for the carousel pictures
@@ -46,10 +41,6 @@ function readwishURL(input) {
 $(document).ready(function() {
 		carousel(0);
 
-		// set_body_width();
-		// $(window).bind('resize', function() { 
-		// 	set_body_width(); 
-		// });
 
 		//for the parallax display
 	    $('section[data-type="background"]').each(function(){
@@ -66,24 +57,22 @@ $(document).ready(function() {
 		});
 
 	    //for the supply buttons
-		$('#supplies').hide();
+		//$('#supplies').hide();
 		$('#supply').click(function(){
-			$('#supplies').fadeIn();
 			$('#supplylist').css('background', 'rgba(255, 255, 250, 0.5)');
 		});
-		$('#hidesupplies').click(function(){
-			$('#supplies').fadeOut();
-		}); 
+		//$('#hidesupplies').click(function(){
+		//	$('#supplies').fadeOut();
+		//}); 
 
 		//fer the wishes table
-		$('#wishes').hide();
-		$('#wish').click(function(){
-			$('#wishes').fadeIn();
+		//$('#wishes').hide();
+		$('#wishes').click(function(){
 			$('#wishlist').css('background', 'rgba(255, 255, 250, 0.5');
 		});
-		$('#hidewishes').click(function(){
-			$('#wishes').fadeOut();
-		});
+		//$('#hidewishes').click(function(){
+	//		$('#wishes').fadeOut();
+	//	});
 
 		//for the navbar
 		$('.dropdown-toggle').dropdown()

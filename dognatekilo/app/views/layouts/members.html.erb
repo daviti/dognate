@@ -3,7 +3,7 @@
 <head>
   <title>Dognate</title>
   <%= stylesheet_link_tag    "members", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "jquery","//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js", "members1"  %>
+  <%= javascript_include_tag "jquery", "membersajax", "//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js", "members1"  %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -17,13 +17,8 @@
 </div>
 <div id="container" data-spy="scroll" data-target="#navbar">
 	<section id="intro" data-type="background" data-speed="20">
-		<% if user_signed_in? %>
-			<h4 id="username" class="pull-left"><%= @user.first_name + " " + @user.last_name %></h4>
-			<% @zip = @user.addresses.pluck(:zipcode).to_s %>
-				<h4 class="pull-left">   <%= @zip.gsub(/[^0-9]/,'') %></h4>
-		<% end %>
-
 		<div id="middle" class="row-fluid">
+			<%= yield :privacy %>
 			<%= yield :intro %>
 		</div>
 	</section>
@@ -33,9 +28,9 @@
 		</div>
 	</section>
 	<section id="about" data-type="background" data-speed="20">
+		<%= yield :carousel %>
 		<div id="about_article">
 			<%= yield :supply_table %>
-			
 		</div>
 	</section>
 	<section id="ender" data-type="background" data-speed="8">
@@ -43,7 +38,7 @@
 			<%= yield :ender %>
 		</div>
 	</section>
-	<section class="" id="footer" data-type="background" data-speed="10">
+	<section class="" id="footer" data-type="background" data-speed="100">
 		<div class="" id="foot_article">
 			<%= yield :footer %>
 		</div>	
