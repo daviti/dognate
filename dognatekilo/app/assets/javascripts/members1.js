@@ -79,6 +79,15 @@ $(document).ready(function() {
 
 		$('#endertab').removeClass('.active')
 
+		$('#newwish').hide();
+
+		$('#show_wish').click(function(){
+			$('#newwish').slideDown();
+		});
+
+		$('#close_wish').click(function(){
+			$('#newwish').slideUp();
+		})
 
 		
 });
