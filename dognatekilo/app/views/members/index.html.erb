@@ -19,6 +19,7 @@
 
 	<div id="wish_table" class="col-md-6">
 		<% if user_signed_in? %>
+		<button class="btn btn-info" id="show_wish">Create a new wish</button>
 		<div id="newwish">
 				<%= render 'newwish' %>
 		</div>		
@@ -29,13 +30,18 @@
 			<%= text_field_tag :search, params[:search] %>
 			<%= submit_tag "Search" , :name => nil %>
 			</p>
-		
-				<div id="wishes">
-					<%= render 'wishtable' %> 
-				</div>
-		</div>
+			<div id="wishes">
+				<%= render 'wishtable' %> 
+			</div>
+	</div>
 		<% end %> <!-- end of wishtable search form/table rendering -->
 	<div id="supply_table" class="col-md-6">
+		<% if user_signed_in? %>
+		<button class="btn btn-info" id="show_wish">Add an item</button>
+		<div id="newsupply">
+				<%= render 'newsupply' %>
+		</div>		
+		<% end %>
 		<h4 class="tablehead">Current Listings</h4>
 		<%= form_tag root_path, :method => 'get', :id => "supplies_search" do %>
 			<p>
