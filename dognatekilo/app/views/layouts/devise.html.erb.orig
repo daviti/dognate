@@ -10,7 +10,7 @@
 <% if alert %>
   <p class="alert alert-error"><%= alert %></p>
 <% end %>
-<<<<<<< HEAD
+
 <div id="navbar" class="navbar navbar-default navbar-fixed-top">
 	<h2 class="pull-left"><span id="leftnav">DOG</span>NATE</h2>
 		<div class="navlist">
@@ -25,7 +25,7 @@
 				<a href="#" id="Account" role="button" class="dropdown-toggle" data-toggle="dropdown">Account Preferences</a>
 					<ul class="dropdown-menu" role="menu" aria-labelledby="Account">
 						<li role="presentation">
-							<%= link_to 'Edit Info', edit_user_registration_url %> 
+							<%= link_to 'Edit Info', edit_user_registration_url %>
 						</li>
 						<li><%= link_to 'Address', new_address_path %></li>
 					</ul>
@@ -37,10 +37,6 @@
 	<!-- end of the navbar-->
 </div>
 <section id="home" data-type="background" data-speed="10">
-	<div id="article"><%= yield :form %></div>
-</section>
-=======
-<section id="home" data-type="background" data-speed="10">
 	<div id="form">
 		<%#= yield :form %>
 	</div>
@@ -48,7 +44,7 @@
 <section id="about" data-type="background" data-speed="10">
 	<div id="article"><%= yield :form %></div>
 </select>
->>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+
 </div>
 </body>
 </html>

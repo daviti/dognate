@@ -9,11 +9,10 @@
 <body>
 <% if alert %>
   <p class="alert alert-error"><%= alert %></p>
-<<<<<<< HEAD
+
   <p class="alert alert-error"><%= error %></p>
 
-=======
->>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+
 <% end %>
 <div id="navbar" class="navbar navbar-default navbar-fixed-top">
 	<%= yield :navbar %>
@@ -28,15 +27,13 @@
 		<% end %>
 
 		<div id="middle" class="row-fluid">
-			<%= yield :intro %>
+      <div data-spy="scroll" data-target="#navbar">
+      	<section id="intro" data-type="background" data-speed="20">
+      		<div id="middle" class="row-fluid">
+      			<%= yield :intro %>
 			<%= yield %>
-			
-=======
-<div data-spy="scroll" data-target="#navbar">
-	<section id="intro" data-type="background" data-speed="20">
-		<div id="middle" class="row-fluid">
-			<%= yield :intro %>
->>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+
+
 		</div>
 	</section>
 	<section id="home" data-type="background" data-speed="8">
@@ -45,40 +42,29 @@
 		</div>
 	</section>
 	<section id="about" data-type="background" data-speed="20">
-<<<<<<< HEAD
-		<div id="about_article">
-=======
 		<div id="article">
->>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+
 			<%= yield :supply_table %>
-			
+
 		</div>
 	</section>
 	<section id="ender" data-type="background" data-speed="8">
-<<<<<<< HEAD
-		<div id="ender_article">
-			<%= yield :ender %>
-		</div>
-	</section>
-	<section class="" id="footer" data-type="background" data-speed="10">
-		<div class="" id="foot_article">
-=======
+
 		<div id="article">
 			<%= yield :ender %>
 		</div>
 	</section>
 	<section id="footer" data-type="background" data-speed="10">
 		<div id="article">
->>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+
 			<%= yield :footer %>
-		</div>	
+		</div>
 	</section>
 
 </div>
 <%= yield :supply_modal %>
-<<<<<<< HEAD
+
 <%= yield :wish_modal %>
-=======
->>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+
 </body>
 </html>

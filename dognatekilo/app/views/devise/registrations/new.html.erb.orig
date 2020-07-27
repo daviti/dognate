@@ -1,17 +1,12 @@
-<<<<<<< HEAD
-=======
+
 <h2>Sign up</h2>
 
->>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
 <% content_for :form do %>
   <%= simple_form_for(resource, as: resource_name, html: { id: 'reg'} , url: registration_path(resource_name)) do |f| %>
     <%= f.error_notification %>
 
-<<<<<<< HEAD
-    <div class="form-inputs" id="register">
-=======
     <div class="form-inputs">
->>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+
     <h2>Register</h2>
   	<%= f.input :first_name, placeholder: 'First Name', label: false, required: true %>
   	<%= f.input :last_name, placeholder: 'Last Name', label: false, required: true %>
@@ -19,11 +14,9 @@
       <%= f.input :email, placeholder: 'Email', label: false, required: true, autofocus: true %>
       <%= f.input :password, placeholder: 'Password', label: false, required: true %>
       <%= f.input :password_confirmation, placeholder: 'Confirm Password', label: false, required: true %>
-<<<<<<< HEAD
-      <%= f.button :submit, "Sign up", class: "btn btn-success"  %>
-=======
+
       <%= f.button :submit, "Sign up" %>
->>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
+
     </div>
 
     <p>Fields marked with * are required</p>

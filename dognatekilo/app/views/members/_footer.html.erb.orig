@@ -1,9 +1,9 @@
-<<<<<<< HEAD
+
  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 
  <div class="container_12">
      <div class="grid_6">
-    
+
                  <div class="jumbotron jumbotron-sm">
     <div class="container">
         <div class="row">
@@ -18,7 +18,7 @@
                      <figure class="img_inner">
                           <iframe src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Brooklyn,+New+York,+NY,+United+States&amp;aq=0&amp;sll=37.778445, -122.435085&amp;sspn=37.778445, -122.435085&amp;ie=UTF8&amp;hq=&amp;hnear=San Francisco,+mcallister,+California&amp;ll=40.649974,-73.950005&amp;spn=37.778445, -122.435085&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
                          </figure>
-        
+
 <div class="container">
     <div class="row">
         <div class="col-md-8">
@@ -73,7 +73,7 @@
                 <strong>Dognate, LLC.</strong><br>
                 1324B McAllister Street.<br>
                 San Francisco, CA 94115<br>
-             
+
             </address>
             <address>
                 <strong>Web Team</strong><br>
@@ -83,19 +83,3 @@
         </div>
     </div>
 </div>
-
-
-
-=======
-<div>
-	<div id="foot_left" class="col-md-4">
-		
-	</div>
-	<div id="foot_center" class="col-md-4">
-		
-	</div>
-	<div id="foot_right" class="col-md-4">
-		
-	</div>
-</div>
->>>>>>> ab155fbaeaa901c18b495d39f7797984cd7338ad
